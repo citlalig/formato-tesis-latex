@@ -1,0 +1,23 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Knowledge(2015)]{ckf}
+Open Knowledge.
+\newblock What is open?, Febrero 2015.
+\newblock URL \url{https://okfn.org/opendata/}.
+
+\bibitem[Knowledge(2014)]{odh}
+Open Knowledge.
+\newblock Open data handbook, Diciembre 2014.
+\newblock URL \url{http://opendatahandbook.org/pdf/OpenDataHandbook.pdf}.
+
+\bibitem[Data(2014)]{ogd}
+Open~Government Data.
+\newblock Open government data, Diciembre 2014.
+\newblock URL \url{http://opengovernmentdata.org/}.
+
+\end{thebibliography}
