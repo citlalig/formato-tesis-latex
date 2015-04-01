@@ -1,1 +1,38 @@
 \chapter{Descripción del Problema} 
+
+Los catálogo de Datos Abiertos permiten que se creen herramientas de todo tipo para medir y estudiar lo que ocurre a partir de la información recolectada. 
+Nuevas tecnologías permiten ahora construir servicios para responder automáticamente preguntas como: ¿Cuál es el eje carretero más largo en un país?  ¿Qué porcentaje del presupuesto se destina para el alumbrado público? ¿En que región existen mejores oportunidades de trabajo? 
+Mucha de la información necesaria para responder estas preguntas es generada por instituciones públicas, sin embargo, frecuentemente la información no esta disponible en un formato que sea fácil de utilizar.  
+
+En México, en el año 2014, como parte de la Política de Datos Abiertos, el Gobierno Mexicano ha puesto a disposición de toda la población la mayor cantidad de información posible de todo lo que ocurre en las entidades de Gobierno y con cada programa social que se desarrolla en el país a través de la plataforma llamada datos.gob.mx.
+De acuerdo con el comunicado oficial del Gobierno Federal, desde dicha página se puede \enquote{acceder, descargar, y utilizar libremente los datos abiertos que el Gobierno de la República genera y recolecta, con el fin de innovar, emprender, incrementar la transparencia, eficientar al gobierno y promover la innovación cívica.}  \cite{datosmx}
+
+Una investigación realizada en la Universidad de Waterloo en Canada en el año de 2014 analiza diferentes casos de uso de sistemas que fueron implementados utilizando datos abiertos y refleja la complejidad que implica el trabajar con ellos: \cite{OpenDataPerspectives}
+\begin{itemize}
+\item Hay situaciones en las que para poder hacer un analisis se requiere información tanto de instituciones gubernamentales como no gubernamentales. ¿Cómo aseguramos que toda la información necesaria para un proyecto se encuentra disponible?
+\item Aplicaciones que requieren información de ultimo momento, como una aplicación para predecir el clima, requiere de la información este lo más actualizada posible. ¿Cómo podemos asegurar que la información requerida aún es válida y que sea actualizada en un periodo aceptable de tiempo?
+\item Algunas veces es necesario consultar información no propia del documento pero de su publicación, por ejemplo, lugar y fecha de publicación ¿Cómo puedo acceder a herramientas que permitan consultar metadata y palabras clave de un documento?
+\item Liberar datos abiertos puede tener efectos en la privacidad de los individuos afectados cuando alguna información personal pudiera ser inferidos por datos abiertos. ¿Cómo puedo asegurar que los datos abiertos que han sido compartidos no implican potenciales problemas de seguridad o privacidad?
+\end{itemize}
+
+Idealmente para un usuario debería ser posible fácilmente realizar tareas tales como: \cite{odh}
+\begin{itemize}
+\item Descubir la existencia de determinado conjunto de datos.
+\item Acceder a los datos para su investigación y análisis.
+\item Encontrar la información detallada describiendo la información y su proceso de producción.
+\item Acceder a las fuentes de datos e instrumentos de collección con los cuales la información fue colectada.
+\item Efectivamente comunicarse con las agencias involucradas en el proceso de producción, almacenamiento y distribución de la información.
+\item Compartir el conocimiento con otros usuarios.
+\end{itemize}
+
+Sin embargo, la realidad aún se aleja de los ideales de el Movimiento Conocimiento Abierto. No es suficiente con declarar los conjuntos de datos como 'abiertos' para que estos datos tenga un uso práctico para el ciudadano común. 
+
+\clearpage
+Cuando estos datos son liberados en su formato crudo (raw en Inglés), sólo tienen sentido para los especialistas técnicos que saben como extraerlos, interpretarlos y utilizarlos. De nuevo, esta información sigue estando únicamente a disposición de ciertos grupos privilegiados.
+
+Si se pretende que esta información tenga un alcance masivo y sea significativa para la ciudadanía en general, debemos de enfocarnos en solucionar los principales retos a los que se enfrenta un usuario es su búsqueda de datos abiertos los cuales son:
+\begin{itemize}
+\item La navegación en la plataforma no es intuitiva para un usuario que no este familiarizado con entornos tecnológicos.
+\item Los formatos en que los datos son presentados son muy diversos, varía desde archivos en formatos zip, csv, xml, json, kmz, etc. 
+\item El motor de búsqueda integrado a la plataforma es poco eficiente por lo que un usuario debe saber de antemano cual es la fuente que esta generado los datos de su interés, de otra manera tiene que recurrir a la búsqueda mediante etiquetas que no siempre pueden estar disponibles.
+\end{itemize}

@@ -1,24 +1,31 @@
 \select@language {spanish}
 \contentsline {chapter}{Resumen}{\es@scroman {ii}}{dummy.1}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{dummy.2}
-\contentsline {chapter}{Índice de Figuras}{\es@scroman {v}}{dummy.4}
-\contentsline {chapter}{Índice de Cuadros}{\es@scroman {vi}}{dummy.6}
-\contentsline {chapter}{Abreviaciones}{\es@scroman {vii}}{dummy.8}
+\contentsline {chapter}{Índice de Figuras}{\es@scroman {vi}}{dummy.4}
+\contentsline {chapter}{Índice de Cuadros}{\es@scroman {vii}}{dummy.6}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {viii}}{dummy.8}
 \contentsline {chapter}{\numberline {1}Introducci\'on}{1}{chapter.11}
-\contentsline {chapter}{\numberline {2}Descripci\'on del Problema}{3}{chapter.12}
-\contentsline {chapter}{\numberline {3}Objetivos de la Investigaci\'on}{4}{chapter.13}
-\contentsline {chapter}{\numberline {4}Pregunta de Investigaci\'on}{5}{chapter.14}
-\contentsline {chapter}{\numberline {5}Resultados Esperados}{6}{chapter.15}
-\contentsline {chapter}{\numberline {6}Delimitaci\'on de la Investigaci\'on}{7}{chapter.16}
-\contentsline {chapter}{\numberline {7}Justificaci\'on}{8}{chapter.17}
-\contentsline {chapter}{\numberline {8}Bases Te\'oricas}{9}{chapter.18}
-\contentsline {section}{\numberline {8.1}A Section}{9}{section.19}
-\contentsline {subsection}{\numberline {8.1.1}A Subsection}{9}{subsection.20}
-\contentsline {section}{\numberline {8.2}Another Section}{9}{section.21}
-\contentsline {chapter}{\numberline {9}Propuesta de Soluci\'on}{11}{chapter.22}
-\contentsline {chapter}{\numberline {10}Implementaci\'on de la Soluci\'on}{12}{chapter.23}
-\contentsline {chapter}{\numberline {11}Resultados}{13}{chapter.24}
-\vspace {2em}
-\contentsline {chapter}{\numberline {A}An Appendix}{14}{appendix.25}
-\vspace {2em}
-\contentsline {chapter}{Bibliograf\'{\i }a}{16}{dummy.26}
+\contentsline {section}{\numberline {1.1}Datos Abiertos de Gobierno}{3}{section.12}
+\contentsline {chapter}{\numberline {2}Descripci\'on del Problema}{5}{chapter.13}
+\contentsline {chapter}{\numberline {3}Definici\'on del Problema}{8}{chapter.14}
+\contentsline {chapter}{\numberline {4}Pregunta de Investigaci\'on}{9}{chapter.15}
+\contentsline {chapter}{\numberline {5}Objetivos de la Investigaci\'on}{10}{chapter.16}
+\contentsline {section}{\numberline {5.1}Objetivo General}{10}{section.17}
+\contentsline {section}{\numberline {5.2}Objetivos Particulares}{10}{section.18}
+\contentsline {chapter}{\numberline {6}Resultados Esperados}{11}{chapter.22}
+\contentsline {chapter}{\numberline {7}Delimitaci\'on de la Investigaci\'on}{12}{chapter.23}
+\contentsline {chapter}{\numberline {8}Justificaci\'on}{13}{chapter.24}
+\contentsline {chapter}{\numberline {9}Bases Te\'oricas}{14}{chapter.25}
+\contentsline {section}{\numberline {9.1}Marco Historico y Contextual}{14}{section.26}
+\contentsline {section}{\numberline {9.2}Marco Referencial}{14}{section.27}
+\contentsline {section}{\numberline {9.3}Marco Te\'orico}{14}{section.28}
+\contentsline {section}{\numberline {9.4}T\'erminos B\'asicos}{14}{section.29}
+\contentsline {chapter}{\numberline {10}Propuesta de Soluci\'on}{15}{chapter.30}
+\contentsline {section}{\numberline {10.1}Conjunto de Datos}{15}{section.31}
+\contentsline {chapter}{\numberline {11}Implementaci\'on de la Soluci\'on}{16}{chapter.32}
+\contentsline {section}{\numberline {11.1}Arquitectura}{16}{section.33}
+\contentsline {section}{\numberline {11.2}Detalles T\'ecnicos}{16}{section.34}
+\contentsline {chapter}{\numberline {12}Resultados}{17}{chapter.35}
+\contentsline {chapter}{\numberline {A}Resumen de formatos de archivos m\'as comunes}{18}{appendix.36}
+\contentsline {chapter}{\numberline {B}Ejemplos de implementaciones CKAN en el mundo}{19}{appendix.37}
+\contentsline {chapter}{Bibliograf\'{\i }a}{29}{dummy.38}

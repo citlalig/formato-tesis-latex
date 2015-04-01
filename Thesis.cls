@@ -246,14 +246,14 @@
 {
   \cleardoublepage
 }
-\newenvironment{palabrasreservadas}
+\newenvironment{palabrasclave}
 {
   \btypeout{Abstract Page}
   \thispagestyle{empty}
   \null\vfil
   \begin{flushleft}
     \setlength{\parskip}{0pt}
-    {\LARGE{\textit{Palabras Reservadas: }} \par}
+    {\LARGE{\textit{Palabras Clave: }} \par}
    \end{flushleft}
 }
 {

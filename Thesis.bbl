@@ -1,23 +1,73 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Knowledge(2015)]{ckf}
+\bibitem[Knowledge(2015)]{okf}
 Open Knowledge.
 \newblock What is open?, Febrero 2015.
 \newblock URL \url{https://okfn.org/opendata/}.
+
+\bibitem[Data(2014)]{ogd}
+Open~Government Data.
+\newblock Open government data, Diciembre 2014.
+\newblock URL \url{http://opengovernmentdata.org/}.
+
+\bibitem[Data.Gov(2015{\natexlab{a}})]{dataus}
+Data.Gov.
+\newblock U.s. government open data, Enero 2015{\natexlab{a}}.
+\newblock URL \url{http://www.data.gov/}.
+
+\bibitem[Data.Gov(2015{\natexlab{b}})]{datauk}
+Data.Gov.
+\newblock U.k. government open data, Enero 2015{\natexlab{b}}.
+\newblock URL \url{http://data.gov.uk/}.
+
+\bibitem[Data.Gov(2015{\natexlab{c}})]{datacan}
+Data.Gov.
+\newblock Canada government open data, Enero 2015{\natexlab{c}}.
+\newblock URL \url{http://open.canada.ca/en}.
+
+\bibitem[Data.Gov(2015{\natexlab{d}})]{datanz}
+Data.Gov.
+\newblock New zealand government open data, Enero 2015{\natexlab{d}}.
+\newblock URL \url{https://data.govt.nz/}.
+
+\bibitem[Data.Gov(2015{\natexlab{e}})]{datamx}
+Data.Gov.
+\newblock Mexico government open data, Enero 2015{\natexlab{e}}.
+\newblock URL \url{http://datos.gob.mx/}.
 
 \bibitem[Knowledge(2014)]{odh}
 Open Knowledge.
 \newblock Open data handbook, Diciembre 2014.
 \newblock URL \url{http://opendatahandbook.org/pdf/OpenDataHandbook.pdf}.
 
-\bibitem[Data(2014)]{ogd}
-Open~Government Data.
-\newblock Open government data, Diciembre 2014.
-\newblock URL \url{http://opengovernmentdata.org/}.
+\bibitem[Government(2015)]{opendatawhitepaper}
+UK~Government.
+\newblock Open data white paper unleashing the potential, Febrero 2015.
+\newblock URL
+  \url{https://www.gov.uk/government/uploads/system/uploads/attachment
+  data/file/78946/CM8353 acc.pdf}.
+
+\bibitem[CKAN(2014)]{ckan}
+CKAN.
+\newblock The open source data software portal, Diciembre 2014.
+\newblock URL \url{http://ckan.org/}.
+
+\bibitem[de~la República(2014)]{datosmx}
+Presidencia de~la República.
+\newblock ¿ya conoces datos.gob.mx?, Junio 2014.
+\newblock URL
+  \url{http://www.gob.mx/presidencia/datos-abiertos/ya-conoces-datos-gob-mx/}.
+
+\bibitem[F.(2014)]{OpenDataPerspectives}
+Cowan D. ; Alencar P. ;~McGarry F.
+\newblock Perspectives on open data: Issues and opportunities.
+\newblock \emph{Software Science Technology and Engineering (SWSTE) 2014 IEEE
+  International Conference on}, pages 24--33, June 2014.
+\newblock URL \url{http://link.aip.org/link/?RSI/62/1/1}.
 
 \end{thebibliography}

@@ -2,12 +2,13 @@
 
 En la última década, un movimiento ha surgido gradualmente en todo el mundo, conocido como el movimiento de los Datos Abiertos (Open Data Movement en Inglés). Su objetivo es la difusión del Conocimiento Abierto en su mas amplio sentido. 
 
-La Fundación Conocimiento Abierto define el conocimiento abierto como: \begin{quote} \enquote{cualquier contenido, información o dato que puede ser libremente utilizado, reutilizado y redistribuido -sin restricciones legales, tecnológicas o sociales-. [...] El conocimiento abierto es en lo que se convierten los datos abiertos cuando son útiles, usables y utilizados} \cite{ckf} \end{quote}
+La Fundación Conocimiento Abierto (Open Knowledge Foundation en Inglés) define el conocimiento abierto como: \begin{quote} \enquote{cualquier contenido, información o dato que puede ser libremente utilizado, reutilizado y redistribuido -sin restricciones legales, tecnológicas o sociales-. [...] El conocimiento abierto es en lo que se convierten los datos abiertos cuando son útiles, usables y utilizados} \cite{okf} \end{quote}
 
 Los Datos Abiertos son por ende, la base de construcción en la que se fundamenta el Conocimiento Abierto.
 
 El término de Datos Abiertos es una práctica que tiene como objetivo que determinados tipos de datos estén disponibles para todo el mundo sin restricciones de derechos de autor, patentes u otro mecanismo de control. Dicho concepto no es nuevo, sin embargo, ha ganado mayor relevancia con el aumento en la popularidad de tecnologías como el Internet y la Red Informática Mundial (World Wide Web en Inglés o WWW), así como a la acumulación masiva de datos (Big Data en Inglés).
 
+\clearpage
 La filosofía detrás de éste movimiento se centra en 3 principales aspectos:
 
 1) Disponibilidad y Accesso:
@@ -23,8 +24,23 @@ Cualquier persona debe de tener la posibilidad de usar, reutilizar y redistribui
 
 Los tipos de Datos Abiertos comprenden campos de estudio muy diversos como lo son Cultural, Científico, Finanzas, Estadística, Climatológica, Ambiental, de Transporte y Gubernamental. 
 
-Los Datos Abiertos de Gobierno son un proyecto de la Fundación Conocimiento Abierto enfocada exclusivamente a la publicación de datos producidos por instituciones gubernamentales. Varios países incluidos los Estados Unidos Americanos, Reino Unido, Canada, Nueva Zelanda y recientemente México han anunciado sus propias iniciativas hacia la apertura de su información. \cite{odh} 
+\clearpage
 
-Los sitios web que forman parte de el proyecto Datos Abiertos de Gobierno están desarrollados utilizando una plataforma tecnológica conocida como CKAN (Comprehensive Knowledge Archive Network en Inglés), también mantenida por la Fundacion Conocimiento Abierto. CKAN es un sistema para el almacenamiento y distribución de información que provee herramientas para publicar, compartir, buscar y utilizar los datos. CKAN esta enfocado a gobiernos regionales y nacionales, compañías y organizaciones que quieren hacer que sus datos sean abiertos y disponibles al público. \cite{ogd} 
+\section{Datos Abiertos de Gobierno}
 
-Éste documento investiga la estructura e implementación de la plataforma CKAN en diferentes instituciones gubernamentales con la finalidad de proponer una nueva herramienta capaz de estructurar la información proporcionada por las instituciones gubernamentales de manera uniforme utilizando en un formato genérico y permitir así la consulta y análisis de la información de una manera más simple y natural.
+Los Datos Abiertos de Gobierno son un proyecto de la Fundación Conocimiento Abierto enfocada exclusivamente a la publicación de datos producidos por instituciones gubernamentales. Varios países incluidos los Estados Unidos Americanos, Reino Unido, Canada, Nueva Zelanda y recientemente México han anunciado sus propias iniciativas hacia la apertura de su información. \cite{ogd, dataus, datauk, datacan, datanz, datamx} 
+
+Ya es posible señalar una gran cantidad de áreas donde los Datos Abiertos de Gobierno están creando valor. Algunos ejemplos de ellos son: \cite{odh, opendatawhitepaper}
+\begin{itemize}
+\item En términos de transparencia, proyectos como el Finlandés 'árbol de impuestos' o el Británico '¿A donde va mi dinero?' nos muestran como se gasta el dinero de los impuestos por el gobierno. También páginas web como la página Danes folketsting.dk permite monitorear las actividades en el parlamento y el proceso de construcción de leyes para poder saber exactamente qué esta sucediendo y que representantes están involucrados.
+\item Los Datos Abiertos de Gobierno también pueden ayudar a tomar mejores decisiones en la vida personal, o habilitar a las personas para tener una participación más activa en la sociedad. Una mujer en Dinamarca construyo el sitio web findtoilet.dk para mostrar todos los baños públicos y ayudar a las personas con problemas a salir nuevamente. En Holanda existe un servicio vervuilingsalarm.nl que te advierte con un mensaje de la calidad de el aire en tu comunidad. En Nueva York se puede encontrar fácilmente donde sacar el perro a pasear así como conocer otras personas que frecuentan el mismo parque. Servicios como 'mapumental' en Reino Unido y 'Magnificent' en Alemania te permiten encontrar un lugar para vivir teniendo en consideración la duración de el traslado al trabajo, los precios de las casas y la calidad de el area. Todos estos ejemplos utilizan datos abiertos.
+\item Económicamente, los datos abiertos también son de gran importancia. Varios estudios han estimado el valor de los datos abiertos es superior a los diez mil millones de Euros anualmente. Nuevos productos y compañías están utilizando esta información por ejemplo, la página web Danesa husetsweb.dk te ayuda a encontrar manera de mejor la eficiencia energética en el hogar basado en información de los subsidios  gubernamentales. Google Translate utiliza la enorme cantidad de documentos abiertos para entrenar sus algoritmos de traducción y por lo tanto mejorando la calidad de su servicio.
+\item Los datos abiertos son de gran valor para el gobierno mismo ya que colabora a incrementar su eficiencia y efectividad. Por ejemplo el Ministerio de Educación Alemán ha publicado toda la información relacionada con educación en linea para su reutlización. Desde entonces, el número de preguntas que ellos reciben a disminuido reduciendo la carga de trabajo y costos.
+\end{itemize}
+
+Aún cuando ya hay numerosos ejemplos de las maneras en que los datos abiertos están creando valor tanto social como económico, todavía hay un área muy grande de oportunidad para descubrir nuevos campos de investigación.
+
+Los sitios web que forman parte de el proyecto Datos Abiertos de Gobierno están desarrollados utilizando una plataforma tecnológica conocida como CKAN (Comprehensive Knowledge Archive Network en Inglés), también mantenida por la Fundación Conocimiento Abierto. CKAN es un sistema para el almacenamiento y distribución de información que provee herramientas para publicar, compartir, buscar y utilizar los datos. CKAN esta enfocado a gobiernos regionales y nacionales, compañías y organizaciones que quieren hacer que sus datos sean abiertos y disponibles al público. \cite{ckan} 
+
+Éste documento investiga la estructura e implementación de la plataforma CKAN en diferentes instituciones gubernamentales, particularmente en la plataforma del Gobierno Mexicano, sin embargo será aplicable para cualquier otra institución que este desarrollada utilizando las mismas tecnologías,  con la finalidad de proponer una nueva herramienta capaz de extraer la información proporcionada por las instituciones gubernamentales y estructurarla de una manera uniforme utilizando en un formato genérico y permitir así la consulta y análisis de la información de una manera más simple y natural.
+
