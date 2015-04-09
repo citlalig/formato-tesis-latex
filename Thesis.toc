@@ -15,17 +15,19 @@
 \contentsline {chapter}{\numberline {6}Resultados Esperados}{11}{chapter.22}
 \contentsline {chapter}{\numberline {7}Delimitaci\'on de la Investigaci\'on}{12}{chapter.23}
 \contentsline {chapter}{\numberline {8}Justificaci\'on}{13}{chapter.24}
-\contentsline {chapter}{\numberline {9}Bases Te\'oricas}{14}{chapter.25}
-\contentsline {section}{\numberline {9.1}Marco Historico y Contextual}{14}{section.26}
-\contentsline {section}{\numberline {9.2}Marco Referencial}{14}{section.27}
-\contentsline {section}{\numberline {9.3}Marco Te\'orico}{14}{section.28}
-\contentsline {section}{\numberline {9.4}T\'erminos B\'asicos}{14}{section.29}
-\contentsline {chapter}{\numberline {10}Propuesta de Soluci\'on}{15}{chapter.30}
-\contentsline {section}{\numberline {10.1}Conjunto de Datos}{15}{section.31}
-\contentsline {chapter}{\numberline {11}Implementaci\'on de la Soluci\'on}{16}{chapter.32}
-\contentsline {section}{\numberline {11.1}Arquitectura}{16}{section.33}
-\contentsline {section}{\numberline {11.2}Detalles T\'ecnicos}{16}{section.34}
-\contentsline {chapter}{\numberline {12}Resultados}{17}{chapter.35}
-\contentsline {chapter}{\numberline {A}Resumen de formatos de archivos m\'as comunes}{18}{appendix.36}
-\contentsline {chapter}{\numberline {B}Ejemplos de implementaciones CKAN en el mundo}{19}{appendix.37}
-\contentsline {chapter}{Bibliograf\'{\i }a}{29}{dummy.38}
+\contentsline {chapter}{\numberline {9}Bases Te\'oricas}{15}{chapter.26}
+\contentsline {section}{\numberline {9.1}Marco Historico y Contextual}{15}{section.27}
+\contentsline {section}{\numberline {9.2}Marco Referencial}{17}{section.29}
+\contentsline {section}{\numberline {9.3}T\'erminos B\'asicos}{18}{section.39}
+\contentsline {chapter}{\numberline {10}Propuesta de Soluci\'on}{19}{chapter.40}
+\contentsline {section}{\numberline {10.1}Selecci\'on de un Conjunto de Datos}{19}{section.41}
+\contentsline {section}{\numberline {10.2}Recuperaci\'on de datos usando la API de CKAN}{21}{section.45}
+\contentsline {chapter}{\numberline {11}Implementaci\'on de la Soluci\'on}{22}{chapter.46}
+\contentsline {section}{\numberline {11.1}Configuraci\'on de Ambiente}{22}{section.47}
+\contentsline {section}{\numberline {11.2}Arquitectura}{22}{section.48}
+\contentsline {section}{\numberline {11.3}Detalles T\'ecnicos}{22}{section.49}
+\contentsline {chapter}{\numberline {12}Resultados Obtenidos}{23}{chapter.50}
+\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{24}{appendix.51}
+\contentsline {chapter}{\numberline {B}Anexo - Ejemplos de implementaciones CKAN en el mundo}{25}{appendix.52}
+\contentsline {chapter}{\numberline {C}Calendario de Actividades}{35}{appendix.63}
+\contentsline {chapter}{Bibliograf\'{\i }a}{36}{dummy.64}

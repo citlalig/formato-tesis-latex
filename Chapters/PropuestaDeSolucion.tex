@@ -1,3 +1,75 @@
 \chapter{Propuesta de Solución} 
 
-\section{Conjunto de Datos}
+\section{Selección de un Conjunto de Datos}
+
+Hasta Abril de 2015 se reportan un total de 358 conjuntos de datos disponibles en el sitio web \texorpdfstring{\href{http://catalogo.datos.gob.mx/dataset}
+                {http://catalogo.datos.gob.mx/dataset}}
+                {http://catalogo.datos.gob.mx/dataset}
+
+El tamaño de la muestra seleccionada para este estudio fue calculado con base en los procedimientos sugeridos en la teoría del muestreo y probabilidad. Las variables a considerar son las siguientes: \\
+
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Variable & Descripción\\
+\hline
+n & Tamaño de la muestra\\
+N & Tamaño del universo\\
+p & Probabilidad de ocurrencia\\
+q & Probabilidad de no ocurrencia\\
+Me & Margen de error o precisión\\
+Nc & Nivel de confianza o exactitud\\
+\hline
+\end{tabular}
+\caption{Variables para fórmula de cálculo de el tamaño de muestra}
+\end{center}
+\end{table}
+
+\[n = \frac{Npq}{\left[\frac{Me^2}{Nc^2} \left(N - 1\right) \right] + PQ} \]
+
+\clearpage
+
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Variable & Descripción\\
+\hline
+N & 358\\
+p & .5 (Mayor punto de incertidumbre 50\%)\\
+q & 1 - .5 = .5\\
+Me & 5 (Margen de error o precisión +/- 5 \%)\\
+Nc & 1.96 (95 \% de nivel de confianza o exactitud)\\
+\hline
+\end{tabular}
+\caption{Valores reales para fórmula de cálculo de el tamaño de muestra}
+\end{center}
+\end{table}
+
+
+Al substituir la fórmula obtenemos un tamaño de muestra recomendado de: \textbf{186}\\
+
+La distribución de los documentos de la muestra, organizados por tipo de formato e institución que lo genera, fue seleccionado de acuerdo a la disponibilidad de los mismos y se distribuye de la siguiente manera:\\
+
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Cantidad & Formato & Instituciones\\
+\hline
+CSV & 89 & PEMEX, SAGARPA\\
+XML & 55 & PEMEX\\
+JSON & 3 & PROMEXICO\\
+XLS & 2 & SHCP\\
+TXT & 37 & SEDESOL\\
+\hline
+\end{tabular}
+\caption{Selección de tamaño de muestra por tipo de formato}
+\end{center}
+\end{table}
+
+\clearpage
+\section{Recuperación de datos usando la API de CKAN}
+
+

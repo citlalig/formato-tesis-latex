@@ -22,8 +22,8 @@
 \usepackage{csquotes}
 \usepackage{titlesec}
 \usepackage{graphicx}
-
-\titleformat{\chapter}{}{}{0em}{\bf\LARGE}
+\newcommand*{\justifyheading}{\raggedright}
+\titleformat{\chapter}{\normalfont\huge\bfseries\justifyheading}{}{0em}{\bf\LARGE}
 
 %% ----------------------------------------------------------------
 \begin{document}
@@ -67,16 +67,16 @@ Nelson Mandela
 \addtotoc{Resumen}  % Add the "Abstract" page entry to the Contents
 %\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 \resumen{ 
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+En este trabajo se realizó una síntesis de los principales conceptos relacionados con Conocimiento Abierto, tales como Datos Abiertos y Contenido Abierto, a su vez se repasó la historia de como ha evolucionado el movimiento Datos Abiertos a través de los años. Los Gobiernos ahora están liberando información que solía ser privada con el objetivo de ser mas transparentes y eficientes, y para hacerlo, muchos de ellos están aprovechando las tecnologías ya existentes tales como la plataforma CKAN, mantenida por la Fundación Conocimiento Abierto. Sin embargo, el proceso de consulta y análisis de la información es aún muy compleja. Dentro de este documento se discuten algunos de los problemas relacionados con datos abiertos y se sugiere un enfoque diferente a la búsqueda de información no estructurada a través de la implementación de una aplicación de búsqueda basada en Apache Lucene.
+
 }
 \palabrasclave{
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+Conocimiento Abierto, Datos Abiertos, Datos de Gobierno, Indexado, Motor de Búsqueda.
 }
 \abstract{
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
-}
+In this work, a summary has been done of the main concepts related to Open Knowledge such as Open Data and Open Content, also an overview of the history about how the Open Data movement has evolved through the years has been covered. Governments are now releasing data so as to be more transparent and efficient, and in order to do so, many of them are taking advantage of the technologies that already exist such as the CKAN platform maintained by the Open Knowledge Foundation. However the query and analysis processes are still very complex. Within this document some of the issues related to open data are discussed and a different approach to the search of unstructured data is suggested through the implementation of a search application based on Apache Lucene.}
 \keywordsabstract{
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+Open Knowledge, Open Data, Government Data, Indexing, Search Engine.
 }
 \clearpage  % Abstract ended, start a new page
 %% ----------------------------------------------------------------
@@ -114,6 +114,7 @@ A mi familia, por estar ahí siempre.
 \listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
 {
 % \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+\textbf{API} & \textbf{A}pplication \textbf{P}rogram \textbf{I}nterface \\
 \textbf{ODM} & \textbf{O}pen \textbf{D}ata \textbf{M}ovement \\
 \textbf{OKF} & \textbf{O}pen \textbf{K}nowledge \textbf{F}oundation \\
 \textbf{CKAN} & \textbf{C}omprehensive \textbf{K}nowledge \textbf{A}rchive \textbf{N}etwork \\
@@ -149,6 +150,7 @@ A mi familia, por estar ahí siempre.
 \input{Appendices/FormatoDocs} % Appendix Title
 \lhead{\emph{Ejemplos de Implementaciones CKAN en el mundo}}
 \input{Appendices/AppendixA}	% Appendix Title
+\input{Appendices/CalendarioActividades}	% Appendix Title
 %\input{Appendices/AppendixC} % Appendix Title
 
 %\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics

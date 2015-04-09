@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -69,5 +69,37 @@ Cowan D. ; Alencar P. ;~McGarry F.
 \newblock \emph{Software Science Technology and Engineering (SWSTE) 2014 IEEE
   International Conference on}, pages 24--33, June 2014.
 \newblock URL \url{http://link.aip.org/link/?RSI/62/1/1}.
+
+\bibitem[Doshi(2015)]{mckinsey}
+James Manyika; Michael Chui; Peter Groves; Diana Farrell; Steve Van Kuiken;
+  Elizabeth~Almasi Doshi.
+\newblock Open data: Unlocking innovation and performance with liquid
+  information (2013), Enero 2015.
+\newblock URL
+  \url{http://www.mckinsey.com/insights/business_technology/open_data_unlocking_innovation_and_performance_with_liquid_information}.
+
+\bibitem[Lathrop and Ruma(2010)]{lathrop2010open}
+D.~Lathrop and L.~Ruma.
+\newblock \emph{Open Government: Collaboration, Transparency, and Participation
+  in Practice}.
+\newblock O'Reilly Series. O'Reilly Media, Incorporated, 2010.
+\newblock ISBN 9780596804350.
+\newblock URL \url{http://books.google.com.mx/books?id=9UibAgAAQBAJ}.
+
+\bibitem[Obama(2009)]{memorandum}
+Barak Obama.
+\newblock Memorandum on transparency and open government, Enero 2009.
+\newblock URL
+  \url{https://www.whitehouse.gov/the-press-office/transparency-and-open-government}.
+
+\bibitem[Gospodnetic(2010)]{luceneinaction}
+Michael McCandless; Erik Hatcher;~Otis Gospodnetic.
+\newblock \emph{Lucene in Action, Second Edition}.
+\newblock Manning Publications, Stamford, CT, 2010.
+
+\bibitem[Lucene(2014)]{lucenepoweredby}
+Apache Lucene.
+\newblock Lucene powered by, Septiembre 2014.
+\newblock URL \url{http://wiki.apache.org/lucene-java/PoweredBy}.
 
 \end{thebibliography}
