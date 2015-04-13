@@ -13,6 +13,7 @@
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 \usepackage[T1]{fontenc}
 \usepackage{selinput}
+\usepackage{minted}
 \SelectInputMappings{%
   aacute={á},
   ntilde={ñ},
@@ -24,6 +25,7 @@
 \usepackage{graphicx}
 \newcommand*{\justifyheading}{\raggedright}
 \titleformat{\chapter}{\normalfont\huge\bfseries\justifyheading}{}{0em}{\bf\LARGE}
+
 
 %% ----------------------------------------------------------------
 \begin{document}
@@ -115,9 +117,10 @@ A mi familia, por estar ahí siempre.
 {
 % \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 \textbf{API} & \textbf{A}pplication \textbf{P}rogram \textbf{I}nterface \\
+\textbf{CKAN} & \textbf{C}omprehensive \textbf{K}nowledge \textbf{A}rchive \textbf{N}etwork \\
 \textbf{ODM} & \textbf{O}pen \textbf{D}ata \textbf{M}ovement \\
 \textbf{OKF} & \textbf{O}pen \textbf{K}nowledge \textbf{F}oundation \\
-\textbf{CKAN} & \textbf{C}omprehensive \textbf{K}nowledge \textbf{A}rchive \textbf{N}etwork \\
+\textbf{URL} & \textbf{U}niform \textbf{R}esource \textbf{L}ocator \\
 }
 
 %% ----------------------------------------------------------------
@@ -126,9 +129,8 @@ A mi familia, por estar ahí siempre.
 
 % Include the chapters of the thesis, as separate files
 % Just uncomment the lines as you write the chapters
-\lhead{\emph{Introducción}}  % Set the left side page header to "Introducción"
+\lhead{\emph{\leftmark}}  % Set the left side page header to "Introducción"
 \input{Chapters/Introduccion} % Introducción
-\lhead{\emph{Descripción del Problema}}
 \input{Chapters/DescripcionDelProblema} % Descripcion del Problema
 \input{Chapters/DefinicionDelProblema} % Definicion del Problema
 \input{Chapters/PreguntaDeInvestigacion} % Pregunta de Investigación
@@ -140,6 +142,7 @@ A mi familia, por estar ahí siempre.
 \input{Chapters/PropuestaDeSolucion} % Propuesta De Solución
 \input{Chapters/ImplementacionDeSolucion} % Implementación
 \input{Chapters/Resultados} % Resultados
+
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files

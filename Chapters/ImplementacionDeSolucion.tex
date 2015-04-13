@@ -1,7 +1,229 @@
 \chapter{Implementación de la Solución} 
-
 \section{Configuración de Ambiente}
+Para el ambiente de desarrollo es necesario instalar las herramientas descritas a continuación.
+\subsection{Instalación de Lucene}
+La versión Java de Lucene consiste de únicamente un archivo en formato JAR que no tiene otras dependencias. \\
+Para obtener la distribución binaria de Lucene es necesario seguir los siguientes pasos:
+\begin{enumerate}
+\item Descargar la versión mas reciente de la sección de descargas  en el sitio web de Apache Lucene. \texorpdfstring{\href{http://lucene.apache.org/core/downloads.html} {http://lucene.apache.org/core/downloads.html}} {http://lucene.apache.org/core/downloads.html} .  Para el propósito de este proyecto se trabajó con la versión 5.0.0. 
+\item Extraer el archivo binario a el directorio deseado dentro del sistema.
+\item Dentro de el nuevo directorio se encuentra un jar llamado \textbf{lucene-core-<version>.jar.}. Este archivo es el que se utilizará para construir la aplicación. Para utilizarlo es necesario incluir la ubicación en la lista de librerías de clase cuando se compile con Java utilizando el comando javac.
+\end{enumerate}
+\clearpage 
 
-\section{Arquitectura}
+\subsection{Instalación del módulo de Python para acceder la API de CKAN}
+La interfaz ckanapi permite acceder de manera local y remota a instancias de la plataforma CKAN para realizar operaciones masivas de datos y consultas utilizando el lenguaje de programación Python. \\
+Esta librería fue desarrollada por el desarrollador Ian Ward de Ottawa, Canada y puede ser utilizada libremente ya que esta distribuida con licencia MIT.  \cite{ckanapimodule}  \\
+Como prerequisito para utilizar el módulo de Python ckanapi  es necesario instalar Python en el sistema y es compatible con las versiones 2 y 3. 
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{python}
+{     
+import ckanapi
+
+demo = ckanapi.RemoteCKAN('http://demo.ckan.org',
+    user_agent='ckanapiexample/1.0 (+http://example.com/my/website)')
+groups = demo.action.group_list(id='data-explorer')
+print groups
+}
+\end{minted}
+\caption{Ejemplo de solicitud remota utilizando la librería ckanapi en Python} 
+\end{figure}
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+ [u'data-explorer', u'example-group', u'geo-examples', u'skeenawild']
+}
+\end{minted}
+\caption{Ejemplo de respuesta a solicitud remota utilizando la librería ckanapi en Python} 
+\label{json}
+\end{figure}
+
+La librería ckanapi será utilizada para consultar la plataforma de Datos Abiertos del Gobierno Mexicano utilizando el API de CKAN a través de un programa escrito en lenguaje Python y a su vez descargar los documentos abiertos que las instituciones gubernamentales han hecho disponibles.\\
+Los pasos para su instalación son:
+\begin{enumerate}
+\item Descargar la librería de el siguiente sitio \texorpdfstring{\href{https://github.com/ckan/ckanapi}} {https://github.com/ckan/ckanapi} {https://github.com/ckan/ckanapi}.  
+\item Ejecutar el comando \emph{python setup.py install}
+\end{enumerate}
+
+
+\clearpage
 
 \section{Detalles Técnicos}
+En las siguientes secciones se describe los detalles de implementación de cada uno de los componentes involucrados en la creación de la aplicación. Es posible acceder al código de implementación en el repositorio: \\
+\texorpdfstring{\href{https://github.com/citlalig}} {https://github.com/citlalig} {https://github.com/citlalig}.  
+
+
+\subsection{Adquirir Contenido}
+
+El primer paso es adquirir el contenido que necesita ser indexado. Este proceso require el uso de un programa que inspecciona las páginas web de forma metódica y automatizada. Dicha funcionalidad no es provista por la librería de Lucene por lo que se ha escrito un programa en lenguaje Python en conjunto con el módulo ckanapi para obtener los documentos en formato original, es decir sin procesar. \\
+El programa esta compuesto de :
+
+\begin{enumerate}
+\item Una clase \textbf{CkanDatosAbiertosMX} encargada de realizar la conexión remota a el sitio especificado como parámetro así como realizar las invocaciones a la API de CKAN.
+\item Un módulo llamado \textbf{test\_ckandgm.py} encargado de hacer la conexión a la dirección URL de la plataforma de Datos del Gobierno Mexicano, consultar la lista de conjuntos de datos basado en una lista de organizaciones e iterar por cada paquete y recurso dentro de una organización particular para obtener así la dirección web de el recurso y descargar el documento a un repositorio local. Los documentos descargados serán almacenados en un directorio llamado \emph{catálogo} relativo a la ubicación donde el programa fue ejecutado.
+\end{enumerate}
+
+\clearpage
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{python}
+{     
+import ckanapi
+
+class CkanDatosAbiertosMX:
+
+    def __init__(self, site_name, user_agent=None):
+        self.cknsite = ckanapi.RemoteCKAN(site_name,
+        user_agent= user_agent)
+
+    def getOrganizationList(self):
+        # Return a list of the names of the site organizations.
+        return self.cknsite.action.organization_list()
+
+    def getOrganizationDetails(self, org):
+        # Return the details of a organization
+        return self.cknsite.action.organization_show(id=org)
+
+    def getPackageList(self):
+        # Return a list of the names of the site datasets (packages).
+        return self.cknsite.action.package_list()
+
+    def getPackageDetails(self, pck):
+        #Return the metadata of a dataset (package) and its resources.
+        return self.cknsite.action.package_show(id=pck)
+
+    def getTagList (self):
+        #Return a list of the site tags.
+        return self.cknsite.action.tag_list()
+
+    def getTagDetails(self, tag):
+        #Return the details of a tag and all its datasets.
+        return self.cknsite.action.show_tag(id=tag)
+
+    def getResourceDetails(self, rsrc):
+        #Return the metadata of a resource.
+        return self.cknsite.action.resource_show(id=rsrc)
+}
+\end{minted}
+\caption{Código fuente de la clase CkanDatosAbiertosMX} 
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{python}
+{     
+# Encoding: UTF-8
+__author__ = 'citlalig'
+
+from ckandgm import CkanDatosAbiertosMX
+import urllib2
+import os
+import httplib
+import json
+
+def writeFile(fileName, data):
+    output = open(fileName, 'wb')
+    output.write(data)
+    output.close()
+
+def downloadFile(url, path, resource_format, resource_name=None):
+    print 'Downloading file '+ url
+    try:
+        response = urllib2.urlopen(url)
+        if resource_name != None :
+            file_name = resource_name
+        else:
+            file_name = os.path.basename(url)
+        if resource_format.lower() not in file_name.lower():
+            file_name = file_name + '.' + resource_format.lower();
+        print 'Save file ' + file_name +' to Path: ' + path
+        complete_file_name = os.path.join(path, file_name)
+        writeFile(complete_file_name, response.read())
+
+    except urllib2.HTTPError:
+        print 'Failed to download resource %s' % url
+    except httplib.BadStatusLine:
+        print 'Could not fetch resource %s' % url
+
+def makeDir(dirName):
+    if not os.path.exists(dirName):
+        os.makedirs(dirName)
+
+}
+\end{minted}
+\caption{Código fuente de el módulo test\_ckandgm.py (Parte 1)} 
+\end{figure}
+
+\clearpage
+
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{python}
+{     
+##### MAIN CODE ####
+
+SITE_NAME = 'http://catalogo.datos.gob.mx/'
+USER_AGENT = 'MXOpenDataEngine/1.0'
+organizations_list = ['PEMEX', u'ProM\xe9xico', 'SEP', 'Presidencia', 
+                                 'SAGARPA', 'SHCP', 'SEDESOL' ]
+MAIN_FOLDER = 'catalogo'
+SHOW_DETAILS_ACTION = 'api/3/action/organization_show?id='
+
+datosabiertosmx = CkanDatosAbiertosMX(SITE_NAME, USER_AGENT)
+makeDir(MAIN_FOLDER)
+organizations = datosabiertosmx.getOrganizationList()
+for org in organizations:
+    org_det = datosabiertosmx.getOrganizationDetails(org)
+    display_name = org_det['display_name']
+    print "Processing Organization: " + display_name.encode("utf-8")
+    if display_name in organizations_list:
+        path = os.path.join(MAIN_FOLDER, display_name)
+        makeDir(path)
+        downloadFile(SITE_NAME + SHOW_DETAILS_ACTION + 
+        		display_name.lower(), path, "json", 
+		display_name.lower())
+        packages = org_det['packages']
+        for package in packages:
+            print '\n\tProcessing Package: "' + package['title'] + 
+            	'" with government type', package['gov_type']
+            path = os.path.join(os.path.join(MAIN_FOLDER , 
+            	org_det['display_name'], package['title']))
+            makeDir(path)
+            resources = package['resources']
+            print '\t\t Processing Resources in package. '
+            for resource in resources:
+                #print '\t\t Processing Resources in package ' + 
+                		resource['description']
+                print '\t\t Format: ' + resource['format']
+                downloadFile(resource['url'], path, 
+                		resource['format'])
+
+}
+\end{minted}
+\caption{Código fuente de el módulo test\_ckandgm.py (Parte 2)} 
+\end{figure}
+
+\subsection{Construir Documentos}
+\subsection{Analizar los Documentos}
+\subsection{Indexar los Documentos}
+\subsection{Construir Consulta}
+\subsection{Ejecutar Consulta}
+\subsection{Mostrar Resultados}

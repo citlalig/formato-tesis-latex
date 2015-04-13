@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -52,9 +52,9 @@ UK~Government.
   \url{https://www.gov.uk/government/uploads/system/uploads/attachment
   data/file/78946/CM8353 acc.pdf}.
 
-\bibitem[CKAN(2014)]{ckan}
+\bibitem[CKAN(2014{\natexlab{a}})]{ckan}
 CKAN.
-\newblock The open source data software portal, Diciembre 2014.
+\newblock The open source data software portal, Diciembre 2014{\natexlab{a}}.
 \newblock URL \url{http://ckan.org/}.
 
 \bibitem[de~la República(2014)]{datosmx}
@@ -101,5 +101,15 @@ Michael McCandless; Erik Hatcher;~Otis Gospodnetic.
 Apache Lucene.
 \newblock Lucene powered by, Septiembre 2014.
 \newblock URL \url{http://wiki.apache.org/lucene-java/PoweredBy}.
+
+\bibitem[CKAN(2014{\natexlab{b}})]{ckanapi}
+CKAN.
+\newblock Api guide, Diciembre 2014{\natexlab{b}}.
+\newblock URL \url{http://docs.ckan.org/en/latest/api/index.html}.
+
+\bibitem[Ward(2014)]{ckanapimodule}
+Ian Ward.
+\newblock Python module for accessing the ckan action api, Octubre 2014.
+\newblock URL \url{https://github.com/ckan/ckanapi}.
 
 \end{thebibliography}

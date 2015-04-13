@@ -72,4 +72,304 @@ TXT & 37 & SEDESOL\\
 \clearpage
 \section{Recuperación de datos usando la API de CKAN}
 
+Desarrolladores que desean escribir código que interactue con sitios CKAN y su información deben de hacer uso de la API, cualquier operación que un usuario pueda hacer con la interfaz web es posible realizarla utilizando invocaciones a través de código. La lista completa de operaciones soportadas puede ser consultada en el sitio web de CKAN. \cite{ckanapi}
+\begin{itemize}
+\item Para realizar una solicitud a la API de CKAN, es necesario hacer una invocación de tipo HTTP a la URL donde la información se encuentre disponible. 
+\item Los parámetros de consulta deberán ser proporcionados es un diccionario en formato JSON en caso de existir.
+\item La respuesta también será regresada en un diccionario en formato JSON.
+\end{itemize}
+
+La URL en donde se realizan las consultas para obtener información de la plataforma de Datos Abiertos del Gobierno Mexicano es \texorpdfstring{\href{http://catalogo.datos.gob.mx/} {http://catalogo.datos.gob.mx/}} {http://catalogo.datos.gob.mx/}  \\
+A continuación se ejemplifica una serie de consultas que pueden ser realizadas sobre una plataforma CKAN a través de su API y que son las que se emplean para el desarrollo de la aplicación aquí presentada:
+
+\begin{enumerate}
+
+\item  Consultar la lista de los nombres de los conjuntos de datos (paquetes). \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/package_list} {http://catalogo.datos.gob.mx/api/3/action/package\_list}} {http://catalogo.datos.gob.mx/api/3/action/package\_list} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+    "success": true, 
+    "result": [
+    "actividad-hotelera-por-entidad-federativa", 
+    "agencias-del-ministerio-publico-del-estado-de-puebla", 	
+    "apoyos-otorgados-en-2013-sagarpa", 
+    "asegurados-en-el-imss", 
+    "avisos-de-ciclon-tropical",  "..." ]
+}
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener el listado de paquetes} 
+\label{json}
+\end{figure}
+\clearpage
+
+\item  Consultar la lista de las etiquetas del sitio. \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/tag_list} {http://catalogo.datos.gob.mx/api/3/action/tag\_list}} {http://catalogo.datos.gob.mx/api/3/action/tag\_list} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+    "success": true, 
+    "result": [
+	"072",
+	"1er sem",
+	"2014",
+	"2014-2018",
+	"70 y mas",
+	"abasto",
+	"acceso",
+	"accidentes",
+	"accionario",
+	"accionarios",
+	"acciones",
+	"Acciones",
+	"aceptantes",
+	"activa",
+	"Activa.",
+	"activas",
+	"actividad",
+	"Actividad",
+	"actividades",
+	"activo",
+	"activos",
+	"actores sociales",
+	"acuacultura",
+	"Acuacultura",
+	"acuerdo",
+	"acuícola",
+	"acuícolas",
+	"Administración Pública Federal",
+	"administrativa",, "..." ]
+}
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener el listado de etiquetas} 
+\label{json}
+\end{figure}
+\clearpage
+
+
+\item  Consultar la lista de las organizaciones del sitio. \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/organization_list} {http://catalogo.datos.gob.mx/api/3/action/organization\_list}} {http://catalogo.datos.gob.mx/api/3/action/organization\_list} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+    "success": true, 
+    "result": [
+	"ayuntamiento-de-san-luis-potosi",
+	"ayuntamiento-de-san-pedro-garza-garcia",
+	"ayuntamiento-de-xalapa",
+	"cdi",
+	"cfe",
+	"conagua",
+	"conapo",
+	"coneval",
+	"estado-de-jalisco",
+	"estado-de-morelos",
+	"estado-de-puebla",
+	"imss",
+	"inegi",
+	"nafin",
+	"pemex",
+	"pgr",
+	"presidencia",
+	"promexico",
+	"ran",
+	"sagarpa",
+	"salud",
+	"sct",
+	"se",
+	"sectur",
+	"sedesol",
+	"sener",
+	"sep",
+	"servicio-geologico-mexicano",
+	"shcp" ]
+}
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener el listado de organizaciones} 
+\label{json}
+\end{figure}
+\clearpage
+
+\item  Consultar los detalles de una organización en particular. \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/organization_show?id=pemex} {http://catalogo.datos.gob.mx/api/3/action/organization\_show?id=pemex}} {http://catalogo.datos.gob.mx/api/3/action/organization\_show?id=pemex} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+success: true,
+result: {
+	users: [...],
+	display_name: "PEMEX",
+	description: "Petróleos Mexicanos es la mayor empresa de México, 
+		el mayor contribuyente fiscal del país, así como una de las 
+		empresas más grandes de América Latina. 
+		Es de las pocas empresas petroleras del mundo 
+		que desarrolla toda la cadena productiva de la industria, 
+		desde la exploración, hasta la distribución y 
+		comercialización de productos finales, incluyendo
+		la petroquímica. 
+		Durante 2012, sus ingresos totales ascendieron a 
+		un billón 647 mil millones de pesos, 
+		obtuvo un rendimiento de operación de 905 mil millones 
+		de pesos y su inversión ascendió a 311 mil 
+		millones de pesos.",
+	image_display_url: "http://upload.wikimedia.org/wikipedia/
+		en/thumb/a/ac/Pemex_logo.svg/196px-Pemex_logo.svg.png",
+	title: "PEMEX",
+	package_count: 62,
+	created: "2014-06-19T16:48:30.775076",
+	approval_status: "approved",
+	is_organization: true,
+	state: "active",
+	extras: [ ],
+	image_url: "http://upload.wikimedia.org/wikipedia/
+		en/thumb/a/ac/Pemex_logo.svg/196px-Pemex_logo.svg.png",
+	groups: [ ],
+	num_followers: 0,
+	revision_id: "7677a8f4-cfdc-4692-8216-e30bfc5280aa",}
+	packages: [...]
+	type: "organization",
+	id: "bf6fceea-24d7-4e8e-a51c-8e08cdd7eef3",
+	tags: [ ],
+	name: "pemex"
+}
+
+	
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener los detalles de una organización} 
+\label{json}
+\end{figure}
+\clearpage
+
+\item  Consultar los detalles de un conjunto de datos en particular. \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/package_show?id=4c98b21b-25ab-437b-9e73-88dde1c7e6a1\&limit=1} {http://catalogo.datos.gob.mx/api/3/action/package\_show?id=4c98b21b-25ab-437b-9e73-88dde1c7e6a1\&limit=1}} {http://catalogo.datos.gob.mx/api/3/action/package\_show?id=4c98b21b-25ab-437b-9e73-88dde1c7e6a1&limit=1} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+success: true,
+result: {
+	license_title: null, maintainer: null,
+	relationships_as_object: [ ], private: false,
+	maintainer_email: null,
+	revision_timestamp: "2014-12-18T05:25:26.236235",
+	id: "4c98b21b-25ab-437b-9e73-88dde1c7e6a1",
+	metadata_created: "2014-10-07T23:05:36.716956",
+	metadata_modified: "2015-01-13T19:35:59.881787",
+	author: null, author_email: null,
+	state: "active", version: null,
+	creator_user_id: "61464db5-c56e-483a-9510-b30d874f1a22",
+	type: "dataset",
+	resources: [...],
+	num_resources: 1,
+	tags: [...],
+	tracking_summary: { total: 225, recent: 6},
+	groups: [ ],
+	license_id: null,
+	relationships_as_subject: [ ],
+	num_tags: 3,
+	organization: {},
+	name: "estudios-e-investigaciones",
+	isopen: false,
+	gov_type: [],
+	url: null,
+	notes: "Estudios e Investigaciones contratadas en 2013 en 
+		Petroleos Mexicanos y Organismos Subsidiarios",
+	owner_org: "bf6fceea-24d7-4e8e-a51c-8e08cdd7eef3",
+	extras: [
+		{ key: "dcat_modified", value: "2014-09-24T18:00:00"},
+		{ key: "dcat_publisher_email", 
+		   value: "azucena.espindola@pemex.com"},
+		{ key: "dcat_publisher_name", value: "PEMEX"},
+		{ key: "guid", value: "EstudiosEInvest20132014"},
+		{ key: "language", value: "es"}
+	],
+	title: "Estudios e investigaciones",
+	revision_id: "cdef3d52-cede-4bda-aa1c-5c5f432aa2b0"
+}
+
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener los detalles de un conjunto de datos} 
+\label{json}
+\end{figure}
+\clearpage
+
+\item  Consultar los detalles de un recurso en particular. \\
+\texorpdfstring{\href{http://catalogo.datos.gob.mx/api/3/action/resource_show?id=86c242a9-a7ed-4e66-9f6a-1c6f2a44e817} {http://catalogo.datos.gob.mx/api/3/action/resource\_show?id=86c242a9-a7ed-4e66-9f6a-1c6f2a44e817}} {http://catalogo.datos.gob.mx/api/3/action/resource\_show?id=86c242a9-a7ed-4e66-9f6a-1c6f2a44e817} 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{js}
+{     
+success: true,
+result: {
+	resource_group_id: "5ab78142-d6ee-4a3c-90a4-aba2412a9688",
+	cache_last_updated: null,
+	webstore_last_updated: null,
+	datastore_active: false,
+	id: "86c242a9-a7ed-4e66-9f6a-1c6f2a44e817",
+	size: "36864",
+	state: "active",
+	last_modified: null,
+	hash: "",
+	description: "Estudios e Investigaciones contratadas en 2013 en 
+			    Petroleos Mexicanos y Organismos Subsidiarios",
+	format: "CSV",	
+	tracking_summary: {
+		total: 31,
+		recent: 1
+	},
+	mimetype_inner: null,
+	url_type: null,
+	mimetype: null,
+	cache_url: null,
+	name: "Petroleos Mexicanos y Organismos Subsidiarios",
+	created: "2014-12-18T18:43:57.685996",
+	url: "http://www.pemex.com/acerca/informes_publicaciones/
+		Documents/Responsabilidad_Social/
+		EstudiosEInvest20132014.txt",
+	webstore_url: null,
+	position: 0,
+	revision_id: "a8a267e7-27b5-4337-8623-a6bbbe7c844f",
+	resource_type: null
+}
+
+\end{minted}
+\caption{Ejemplo de consulta CKAN para obtener los detalles de un recurso} 
+\label{json}
+\end{figure}
+\clearpage
+\end{enumerate}
+
+\section{Arquitectura de la Aplicación}
+
+Los motores de búsqueda comúnmente utilizan una arquitectura similar a la que se muestra en la Figura~\ref{fig:arquitectura}.\\
+
+%\centering
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=1\textwidth]{Images/ArquitecturaAplicacionDeBusqueda}
+    \caption{ Arquitectura Típica de una Aplicación de Búsqueda.}
+    \label{fig:arquitectura}
+\end{figure}
+
+Es importante aclarar que Lucene es básicamente una librería de búsqueda y el resto de los componentes de una aplicación de búsqueda (obtención de información, filtrado de documentos, interfaz de usuario, administración, etc)  deberán ser implementados independientemente. \\
+Lucene permite indexar y consultar cualquier información de la que se pueda extraer texto, no tiene restricción a cerca de el tipo de dato, formato o idioma, siempre y cuando se pueda obtener texto. Eso significa que se puede indexar y buscar información almacenada en páginas web y servidores remotos, documentos almacenados en sistemas de archivos locales, archivos de texto plano, documentos de Microsoft Word, XML, HTML, PDF u otro formato de el cual se pueda extraer información textual. \\
+La aplicación propuesta en este documento utilizará Lucene para proveer la funcionalidad para los componentes de indexado y búsqueda que se encuentran señalados en verde, 
+y otras herramientas tecnológicas que se describirán más adelante para proveer la funcionalidad de los componentes señalados en gris.  Los componentes señalados en blanco no se incluyen como parte de la propuesta de implementación y forman parte de los objetivos para trabajo a futuro. 
+
 

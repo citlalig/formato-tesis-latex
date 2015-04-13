@@ -11,18 +11,30 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {9.1}{\ignorespaces Cat\'alogo de Datos Abiertos del Gobierno de M\'exico.\relax }}{16}{figure.caption.28}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Ejemplo de consulta CKAN para obtener el listado de paquetes\relax }}{21}{figure.caption.48}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Ejemplo de consulta CKAN para obtener el listado de etiquetas\relax }}{22}{figure.caption.50}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Ejemplo de consulta CKAN para obtener el listado de organizaciones\relax }}{23}{figure.caption.52}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Ejemplo de consulta CKAN para obtener los detalles de una organizaci\'on\relax }}{24}{figure.caption.54}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Ejemplo de consulta CKAN para obtener los detalles de un conjunto de datos\relax }}{25}{figure.caption.56}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Ejemplo de consulta CKAN para obtener los detalles de un recurso\relax }}{26}{figure.caption.58}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Arquitectura T\IeC {\'\i }pica de una Aplicaci\'on de B\'usqueda.\relax }}{27}{figure.caption.60}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Ejemplo de solicitud remota utilizando la librer\IeC {\'\i }a ckanapi en Python\relax }}{30}{figure.caption.68}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Ejemplo de respuesta a solicitud remota utilizando la librer\IeC {\'\i }a ckanapi en Python\relax }}{30}{figure.caption.69}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces C\'odigo fuente de la clase CkanDatosAbiertosMX\relax }}{32}{figure.caption.76}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 1)\relax }}{33}{figure.caption.77}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 2)\relax }}{34}{figure.caption.78}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Datos Abiertos del Gobierno de Amsterdam.\relax }}{25}{figure.caption.53}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Datos Abiertos del Gobierno de \'Africa.\relax }}{26}{figure.caption.54}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Datos Abiertos del Gobierno de Australia.\relax }}{27}{figure.caption.55}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Datos Abiertos del Gobierno de Berlin.\relax }}{28}{figure.caption.56}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Datos Abiertos del Gobierno de Brasil.\relax }}{29}{figure.caption.57}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces Datos Abiertos del Gobierno de Buenos Aires.\relax }}{30}{figure.caption.58}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{31}{figure.caption.59}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{32}{figure.caption.60}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces Datos Abiertos del Gobierno del Reino Unido.\relax }}{33}{figure.caption.61}
-\contentsline {figure}{\numberline {B.10}{\ignorespaces Datos Abiertos del Gobierno de Estados Unidos de Am\'erica.\relax }}{34}{figure.caption.62}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Datos Abiertos del Gobierno de Amsterdam.\relax }}{38}{figure.caption.88}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Datos Abiertos del Gobierno de \'Africa.\relax }}{39}{figure.caption.89}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Datos Abiertos del Gobierno de Australia.\relax }}{40}{figure.caption.90}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Datos Abiertos del Gobierno de Berlin.\relax }}{41}{figure.caption.91}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Datos Abiertos del Gobierno de Brasil.\relax }}{42}{figure.caption.92}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Datos Abiertos del Gobierno de Buenos Aires.\relax }}{43}{figure.caption.93}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{44}{figure.caption.94}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{45}{figure.caption.95}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces Datos Abiertos del Gobierno del Reino Unido.\relax }}{46}{figure.caption.96}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces Datos Abiertos del Gobierno de Estados Unidos de Am\'erica.\relax }}{47}{figure.caption.97}
 \addvspace {10\p@ }

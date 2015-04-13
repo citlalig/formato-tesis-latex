@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 APR 2015 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  12 APR 2015 22:44
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **Thesis.tex
@@ -519,6 +519,69 @@ Package: inputenc 2014/04/30 v1.2b Input encoding file
 Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
 )
 ))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2011/09/17 v1.7 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count142
+\FV@InFile=\read2
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count143
+\FV@StepNumber=\count144
+\FV@OutFile=\write3
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count145
+\float@exts=\toks34
+\float@box=\box36
+\@float@everytoks=\toks35
+\@floatcapt=\box37
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "Thesis.w18")...executed.
+
+
+(./Thesis.w18)
+runsystem(rm -- "Thesis.w18")...executed.
+
+)
+\minted@bgbox=\box38
+\minted@code=\write4
+\@float@every@listing=\toks36
+\c@listing=\count146
+)
+runsystem(which pygmentize && touch Thesis.aex)...executed.
+
+runsystem(rm Thesis.aex)...executed.
+
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/ix-name.def
 File: ix-name.def 2011/05/27 v1.10 Name list (inputenx)
 )
@@ -534,7 +597,7 @@ File: se-iso-8859-15.def 2011/12/02 v1.10 stringenc: ISO-8859-15
 (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/x-iso-8859-15.def
 File: x-iso-8859-15.def 2011/05/27 v1.10 Input encoding iso-8859-15 (inputenx)
 )
-Package selinput Info: Encoding `x-iso-8859-15' selected on input line 20.
+Package selinput Info: Encoding `x-iso-8859-15' selected on input line 21.
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/03/24 3.9k The Babel package
@@ -544,11 +607,11 @@ Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/03/24 3.9k Babel common definitions
-\babel@savecnt=\count142
+\babel@savecnt=\count147
 \U@D=\dimen152
 )
-\es@quottoks=\toks34
-\es@quotdepth=\count143
+\es@quottoks=\toks37
+\es@quotdepth=\count148
 Package babel Info: Making " an active character on input line 516.
 Package babel Info: Making . an active character on input line 617.
 Package babel Info: Making < an active character on input line 662.
@@ -562,17 +625,17 @@ Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count144
+\et@xins=\count149
 )
-\etb@tempcnta=\count145
+\etb@tempcnta=\count150
 )
-\csq@reset=\count146
-\csq@gtype=\count147
-\csq@glevel=\count148
-\csq@qlevel=\count149
-\csq@maxlvl=\count150
-\csq@tshold=\count151
-\csq@ltx@everypar=\toks35
+\csq@reset=\count151
+\csq@gtype=\count152
+\csq@glevel=\count153
+\csq@qlevel=\count154
+\csq@maxlvl=\count155
+\csq@tshold=\count156
+\csq@ltx@everypar=\toks38
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
@@ -585,12 +648,12 @@ File: csquotes.cfg
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box35
+\ttl@box=\box39
 \beforetitleunit=\skip76
 \aftertitleunit=\skip77
 \ttl@plus=\dimen153
 \ttl@minus=\dimen154
-\ttl@toksa=\toks36
+\ttl@toksa=\toks39
 \titlewidth=\dimen155
 \titlewidthlast=\dimen156
 \titlewidthfirst=\dimen157
@@ -603,31 +666,50 @@ Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 (./Thesis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
+
+LaTeX Warning: Label `json' multiply defined.
+
 )
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/ltcaption.sty
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -636,48 +718,42 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count152
+\scratchcounter=\count157
 \scratchdimen=\dimen158
-\scratchbox=\box36
-\nofMPsegments=\count153
-\nofMParguments=\count154
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count155
+\scratchbox=\box40
+\nofMPsegments=\count158
+\nofMParguments=\count159
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count160
 \MPscratchDim=\dimen159
-\MPnumerator=\count156
-\makeMPintoPDFobject=\count157
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
+\everyMPtoPDFconversion=\toks41
 )
-\c@lstlisting=\count158
-\AtBeginShipoutBox=\box37
- (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 137.
-)
-Package hyperref Info: Link coloring ON on input line 29.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+\c@lstlisting=\count163
+\AtBeginShipoutBox=\box41
+Package hyperref Info: Link coloring ON on input line 31.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 
 (./Thesis.out) (./Thesis.out)
-\@outlinefile=\write3
-\openout3 = `Thesis.out'.
+\@outlinefile=\write5
+\openout5 = `Thesis.out'.
 
-LaTeX Info: Redefining \. on input line 29.
-LaTeX Info: Redefining \% on input line 29.
+runsystem(pygmentize -S default -f latex > Thesis.pyg)...executed.
+
+ (./Thesis.pyg)
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 
 ------------------------------------------------------------------------------
  Title Page
@@ -730,8 +806,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ])
-\tf@toc=\write4
-\openout4 = `Thesis.toc'.
+\tf@toc=\write6
+\openout6 = `Thesis.toc'.
 
  [5]
 ------------------------------------------------------------------------------
@@ -741,8 +817,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lof=\write5
-\openout5 = `Thesis.lof'.
+\tf@lof=\write7
+\openout7 = `Thesis.lof'.
 
  [6
 
@@ -755,8 +831,8 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
-\tf@lot=\write6
-\openout6 = `Thesis.lot'.
+\tf@lot=\write8
+\openout8 = `Thesis.lot'.
 
  [7
 
@@ -778,18 +854,33 @@ Cap\'{\i }tulo 1.
 
 
 
-] [2
+]
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+ [2
 
-] [3
+]
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+ [3
 
-]) (./Chapters/DescripcionDelProblema.tex [4]
+]) (./Chapters/DescripcionDelProblema.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [4]
 Cap\'{\i }tulo 2.
 ------------------------------------------------------------------------------
  2 Descripci\'on del Problema
 ------------------------------------------------------------------------------
 [5
 
-] [6]) (./Chapters/DefinicionDelProblema.tex [7
+]
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+ [6]) (./Chapters/DefinicionDelProblema.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [7
 
 ]
 Cap\'{\i }tulo 3.
@@ -841,7 +932,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/EstudioMckinsey.png, id=327, 527.9725pt x 456.70625pt>
+<Images/EstudioMckinsey.png, id=399, 527.9725pt x 456.70625pt>
 File: Images/EstudioMckinsey.png Graphic file (type png)
 
 <use Images/EstudioMckinsey.png>
@@ -879,6 +970,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--1
 
  []
 
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 [14]
 Cap\'{\i }tulo 9.
 ------------------------------------------------------------------------------
@@ -896,23 +989,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
-<Images/CatalogoDatosMx.png, id=351, 1103.12125pt x 610.28pt>
+<Images/CatalogoDatosMx.png, id=423, 1103.12125pt x 610.28pt>
 File: Images/CatalogoDatosMx.png Graphic file (type png)
 
 <use Images/CatalogoDatosMx.png>
 Package pdftex.def Info: Images/CatalogoDatosMx.png used on input line 21.
 (pdftex.def)             Requested size: 417.47307pt x 230.95897pt.
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
  [16
 
- <./Images/CatalogoDatosMx.png>] [17
+ <./Images/CatalogoDatosMx.png>]
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [17
 
 ])
 (./Chapters/PropuestaDeSolucion.tex
-Underfull \hbox (badness 10000) in paragraph at lines 51--1
-
- []
-
-[18
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [18
 
 ]
 Cap\'{\i }tulo 10.
@@ -936,23 +1032,253 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
 [20
 
-]) (./Chapters/ImplementacionDeSolucion.tex [21
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+ (./Thesis.out.pyg
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 3.
+)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [21
 
 ]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+
+(./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [22
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+ [23
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+ [24
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+
+(./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+
+Overfull \hbox (11.67639pt too wide) in paragraph at lines 255--308
+[][]\T1/cmr/m/n/10.95 http://catalogo.datos.gob.mx/api/3/action/package_show?id
+=4c98b21b-25ab-437b-
+ []
+
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
+[25
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+
+Overfull \hbox (10.53181pt too wide) in paragraph at lines 310--355
+[][]\T1/cmr/m/n/10.95 http://catalogo.datos.gob.mx/api/3/action/resource_show?i
+d=86c242a9-a7ed-4e66-
+ []
+
+LaTeX Info: Redefining \. on input line 355.
+LaTeX Info: Redefining \% on input line 355.
+[26
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+
+ []
+
+
+<Images/ArquitecturaAplicacionDeBusqueda.png, id=512, 597.58257pt x 632.3625pt>
+File: Images/ArquitecturaAplicacionDeBusqueda.png Graphic file (type png)
+<use Images/ArquitecturaAplicacionDeBusqueda.png>
+Package pdftex.def Info: Images/ArquitecturaAplicacionDeBusqueda.png used on in
+put line 365.
+(pdftex.def)             Requested size: 417.47307pt x 441.78232pt.
+LaTeX Info: Redefining \. on input line 374.
+LaTeX Info: Redefining \% on input line 374.
+ [27
+
+ <./Images/ArquitecturaAplicacionDeBusqueda.png>]) (./Chapters/ImplementacionDe
+Solucion.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [28]
 Cap\'{\i }tulo 11.
 ------------------------------------------------------------------------------
  11 Implementaci\'on de la Soluci\'on
 ------------------------------------------------------------------------------
-) (./Chapters/Resultados.tex [22
+
+Overfull \hbox (25.14206pt too wide) in paragraph at lines 10--11
+[]\T1/cmr/m/n/10.95 Dentro de el nue-vo di-rec-to-rio se en-cuen-tra un jar lla
+-ma-do \T1/cmr/bx/n/10.95 lucene-core-<version>.jar.\T1/cmr/m/n/10.95 .
+ []
+
+[29
 
 ]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= ,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Th
+esis.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l js -f latex -F tokenmerge             -P "verboptions= 
+,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Thesis
+.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+ [30
+
+]
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+ [31
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= ,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Th
+esis.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
+
+[32
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= ,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Th
+esis.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
+ [33
+
+]
+\openout3 = `Thesis.pyg'.
+
+runsystem(pygmentize -l python -f latex -F tokenmerge             -P "verboptio
+ns= ,frame=single,framesep=3mm,xleftmargin=21pt,tabsize=4" -o Thesis.out.pyg Th
+esis.pyg)...executed.
+
+ (./Thesis.out.pyg)
+runsystem(rm Thesis.out.pyg)...executed.
+
+runsystem(rm Thesis.pyg)...executed.
+
+) (./Chapters/Resultados.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+[34
+
+]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [35]
 Cap\'{\i }tulo 12.
 ------------------------------------------------------------------------------
  12 Resultados Obtenidos
 ------------------------------------------------------------------------------
-) (./Appendices/FormatoDocs.tex [23
+) (./Appendices/FormatoDocs.tex [36
 
 ]
 Ap\'{e}ndice A.
@@ -964,21 +1290,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--1
 
  []
 
-[24
+[37
 
 ]
 Ap\'{e}ndice B.
 ------------------------------------------------------------------------------
  B Anexo - Ejemplos de implementaciones CKAN en el mundo
 ------------------------------------------------------------------------------
-<Images/AmsterdamOpenData.png, id=411, 298.11375pt x 362.35374pt>
+<Images/AmsterdamOpenData.png, id=574, 298.11375pt x 362.35374pt>
 File: Images/AmsterdamOpenData.png Graphic file (type png)
 
 <use Images/AmsterdamOpenData.png>
 Package pdftex.def Info: Images/AmsterdamOpenData.png used on input line 5.
 (pdftex.def)             Requested size: 333.97972pt x 405.97165pt.
 
-<Images/AfricaOpenData.png, id=412, 301.125pt x 480.79625pt>
+<Images/AfricaOpenData.png, id=575, 301.125pt x 480.79625pt>
 File: Images/AfricaOpenData.png Graphic file (type png)
 
 <use Images/AfricaOpenData.png>
@@ -988,7 +1314,7 @@ Package pdftex.def Info: Images/AfricaOpenData.png used on input line 10.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/AustraliaOpenData.png, id=413, 300.12125pt x 366.36874pt>
+<Images/AustraliaOpenData.png, id=576, 300.12125pt x 366.36874pt>
 File: Images/AustraliaOpenData.png Graphic file (type png)
 
 <use Images/AustraliaOpenData.png>
@@ -998,7 +1324,7 @@ Package pdftex.def Info: Images/AustraliaOpenData.png used on input line 15.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BerlinOpenData.png, id=414, 297.11pt x 377.41pt>
+<Images/BerlinOpenData.png, id=577, 297.11pt x 377.41pt>
 File: Images/BerlinOpenData.png Graphic file (type png)
 
 <use Images/BerlinOpenData.png>
@@ -1008,7 +1334,7 @@ Package pdftex.def Info: Images/BerlinOpenData.png used on input line 20.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BrasilOpenData.png, id=415, 298.11375pt x 462.72874pt>
+<Images/BrasilOpenData.png, id=578, 298.11375pt x 462.72874pt>
 File: Images/BrasilOpenData.png Graphic file (type png)
 
 <use Images/BrasilOpenData.png>
@@ -1018,7 +1344,7 @@ Package pdftex.def Info: Images/BrasilOpenData.png used on input line 25.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BuenosAiresOpenData.png, id=416, 301.125pt x 381.425pt>
+<Images/BuenosAiresOpenData.png, id=579, 301.125pt x 381.425pt>
 File: Images/BuenosAiresOpenData.png Graphic file (type png)
 
 <use Images/BuenosAiresOpenData.png>
@@ -1028,7 +1354,7 @@ Package pdftex.def Info: Images/BuenosAiresOpenData.png used on input line 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/MontrealOpenData.png, id=417, 298.11375pt x 402.50375pt>
+<Images/MontrealOpenData.png, id=580, 298.11375pt x 402.50375pt>
 File: Images/MontrealOpenData.png Graphic file (type png)
 
 <use Images/MontrealOpenData.png>
@@ -1038,7 +1364,7 @@ Package pdftex.def Info: Images/MontrealOpenData.png used on input line 35.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/MexicoOpenData.png, id=418, 300.12125pt x 363.3575pt>
+<Images/MexicoOpenData.png, id=581, 300.12125pt x 363.3575pt>
 File: Images/MexicoOpenData.png Graphic file (type png)
 
 <use Images/MexicoOpenData.png>
@@ -1048,7 +1374,7 @@ Package pdftex.def Info: Images/MexicoOpenData.png used on input line 40.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/UKOpenData.png, id=419, 299.1175pt x 442.65375pt>
+<Images/UKOpenData.png, id=582, 299.1175pt x 442.65375pt>
 File: Images/UKOpenData.png Graphic file (type png)
 
 <use Images/UKOpenData.png>
@@ -1058,7 +1384,7 @@ Package pdftex.def Info: Images/UKOpenData.png used on input line 45.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/USOpenData.png, id=420, 300.12125pt x 420.57124pt>
+<Images/USOpenData.png, id=583, 300.12125pt x 420.57124pt>
 File: Images/USOpenData.png Graphic file (type png)
 
 <use Images/USOpenData.png>
@@ -1068,29 +1394,25 @@ Package pdftex.def Info: Images/USOpenData.png used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Appendices/CalendarioActividades.tex [25
+) (./Appendices/CalendarioActividades.tex [38
 
- <./Images/AmsterdamOpenData.png>] [26 <./Images/AfricaOpenData.png>] [27 <./Im
+ <./Images/AmsterdamOpenData.png>] [39 <./Images/AfricaOpenData.png>] [40 <./Im
 ages/AustraliaOpenData.png>]
-[28 <./Images/BerlinOpenData.png>] [29 <./Images/BrasilOpenData.png>] [30 <./Im
-ages/BuenosAiresOpenData.png>] [31 <./Images/MontrealOpenData.png>] [32 <./Imag
-es/MexicoOpenData.png>] [33 <./Images/UKOpenData.png>] [34 <./Images/USOpenData
+[41 <./Images/BerlinOpenData.png>] [42 <./Images/BrasilOpenData.png>] [43 <./Im
+ages/BuenosAiresOpenData.png>] [44 <./Images/MontrealOpenData.png>] [45 <./Imag
+es/MexicoOpenData.png>] [46 <./Images/UKOpenData.png>] [47 <./Images/USOpenData
 .png>]
 Ap\'{e}ndice C.
 ------------------------------------------------------------------------------
  C Calendario de Actividades
 ------------------------------------------------------------------------------
-) [35
+) [48
 
 ]
 ------------------------------------------------------------------------------
  Bibliograf\'{\i }a
 ------------------------------------------------------------------------------
 (./Thesis.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 Underfull \hbox (badness 1303) in paragraph at lines 44--47
 []\T1/cmr/m/n/10.95 Open Know-led-ge.  Open da-ta hand-book, Di-ciem-bre 2014. 
  URL [][]$\T1/cmtt/m/n/10.95 http : / /
@@ -1102,7 +1424,7 @@ Underfull \hbox (badness 2486) in paragraph at lines 49--54
  po-ten-tial, Fe-
  []
 
-[36
+[49
 
 
 ]
@@ -1142,27 +1464,31 @@ itehouse . gov / the-[]press-[]office /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
- [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
+ [50]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
  (./Thesis.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E689282AAAD771F4BD1623C86EC9D91D;5911.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
+(rerunfilecheck)             Checksum: 5E732B9EBF08FD0F69A4901FFB42E812;8029.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 16394 strings out of 493117
- 232983 string characters out of 6135433
- 314785 words of memory out of 5000000
- 19421 multiletter control sequences out of 15000+600000
- 21203 words of font info for 50 fonts, out of 8000000 for 9000
+ 17602 strings out of 493117
+ 249718 string characters out of 6135433
+ 341736 words of memory out of 5000000
+ 20525 multiletter control sequences out of 15000+600000
+ 21519 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,12n,45p,964b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,12n,45p,964b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -1177,20 +1503,21 @@ ive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/20
 14/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/cm-super/sfxc1095.pfb>
-Output written on Thesis.pdf (46 pages, 1304527 bytes).
+/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfxc1095.pfb>
+Output written on Thesis.pdf (59 pages, 1420854 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 129 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 803 PDF objects out of 1000 (max. 8388607)
+ 685 compressed objects within 7 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 394 words of extra memory for PDF output out of 10000 (max. 10000000)
 
