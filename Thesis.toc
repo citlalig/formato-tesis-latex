@@ -2,8 +2,8 @@
 \contentsline {chapter}{Resumen}{\es@scroman {ii}}{dummy.1}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{dummy.2}
 \contentsline {chapter}{Índice de Figuras}{\es@scroman {vi}}{dummy.4}
-\contentsline {chapter}{Índice de Cuadros}{\es@scroman {vii}}{dummy.6}
-\contentsline {chapter}{Abreviaciones}{\es@scroman {viii}}{dummy.8}
+\contentsline {chapter}{Índice de Cuadros}{\es@scroman {viii}}{dummy.6}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {ix}}{dummy.8}
 \contentsline {chapter}{\numberline {1}Introducci\'on}{1}{chapter.11}
 \contentsline {section}{\numberline {1.1}Datos Abiertos de Gobierno}{3}{section.12}
 \contentsline {chapter}{\numberline {2}Descripci\'on del Problema}{5}{chapter.13}
@@ -25,18 +25,23 @@
 \contentsline {section}{\numberline {10.3}Arquitectura de la Aplicaci\'on}{27}{section.59}
 \contentsline {chapter}{\numberline {11}Implementaci\'on de la Soluci\'on}{29}{chapter.61}
 \contentsline {section}{\numberline {11.1}Configuraci\'on de Ambiente}{29}{section.62}
-\contentsline {subsection}{\numberline {11.1.1}Instalaci\'on de Lucene}{29}{subsection.63}
-\contentsline {subsection}{\numberline {11.1.2}Instalaci\'on del m\'odulo de Python para acceder la API de CKAN}{30}{subsection.67}
-\contentsline {section}{\numberline {11.2}Detalles T\'ecnicos}{31}{section.72}
-\contentsline {subsection}{\numberline {11.2.1}Adquirir Contenido}{31}{subsection.73}
-\contentsline {subsection}{\numberline {11.2.2}Construir Documentos}{35}{subsection.79}
-\contentsline {subsection}{\numberline {11.2.3}Analizar los Documentos}{35}{subsection.80}
-\contentsline {subsection}{\numberline {11.2.4}Indexar los Documentos}{35}{subsection.81}
-\contentsline {subsection}{\numberline {11.2.5}Construir Consulta}{35}{subsection.82}
-\contentsline {subsection}{\numberline {11.2.6}Ejecutar Consulta}{35}{subsection.83}
-\contentsline {subsection}{\numberline {11.2.7}Mostrar Resultados}{35}{subsection.84}
-\contentsline {chapter}{\numberline {12}Resultados Obtenidos}{36}{chapter.85}
-\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{37}{appendix.86}
-\contentsline {chapter}{\numberline {B}Anexo - Ejemplos de implementaciones CKAN en el mundo}{38}{appendix.87}
-\contentsline {chapter}{\numberline {C}Calendario de Actividades}{48}{appendix.98}
-\contentsline {chapter}{Bibliograf\'{\i }a}{49}{dummy.99}
+\contentsline {subsection}{\numberline {11.1.1}Instalaci\'on de Apache Lucene}{29}{subsection.63}
+\contentsline {subsection}{\numberline {11.1.2}Instalaci\'on del m\'odulo de Python para acceder la API de CKAN}{30}{subsection.70}
+\contentsline {subsection}{\numberline {11.1.3}Instalaci\'on de Apache Tika}{31}{subsection.75}
+\contentsline {section}{\numberline {11.2}Detalles T\'ecnicos}{32}{section.77}
+\contentsline {subsection}{\numberline {11.2.1}Adquirir Contenido}{32}{subsection.78}
+\contentsline {subsection}{\numberline {11.2.2}Extraer Texto}{37}{subsection.85}
+\contentsline {subsection}{\numberline {11.2.3}Construir Documentos}{38}{subsection.88}
+\contentsline {subsection}{\numberline {11.2.4}Analizar los Documentos}{39}{subsection.90}
+\contentsline {subsection}{\numberline {11.2.5}Indexar los Documentos}{40}{subsection.92}
+\contentsline {subsection}{\numberline {11.2.6}Construir Consulta}{41}{subsection.94}
+\contentsline {subsection}{\numberline {11.2.7}Ejecutar Consulta}{42}{subsection.96}
+\contentsline {subsection}{\numberline {11.2.8}Mostrar Resultados}{43}{subsection.98}
+\contentsline {chapter}{\numberline {12}Resultados Obtenidos}{44}{chapter.100}
+\contentsline {chapter}{\numberline {13}Conclusiones y Trabajo a Futuro}{45}{chapter.101}
+\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{46}{appendix.102}
+\contentsline {chapter}{\numberline {B}Anexo - Calendario de Actividades}{47}{appendix.103}
+\contentsline {chapter}{\numberline {C}Anexo - Listado completo de documentos obtenidos de la plataforma datos.gob.mx}{48}{appendix.104}
+\contentsline {chapter}{\numberline {D}Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)}{49}{appendix.105}
+\contentsline {chapter}{\numberline {E}Anexo - Ejemplos de implementaciones CKAN en el mundo}{55}{appendix.112}
+\contentsline {chapter}{Bibliograf\'{\i }a}{65}{dummy.123}

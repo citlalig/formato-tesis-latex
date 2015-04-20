@@ -1,13 +1,20 @@
 \chapter{Implementación de la Solución} 
 \section{Configuración de Ambiente}
 Para el ambiente de desarrollo es necesario instalar las herramientas descritas a continuación.
-\subsection{Instalación de Lucene}
-La versión Java de Lucene consiste de únicamente un archivo en formato JAR que no tiene otras dependencias. \\
+\subsection{Instalación de Apache Lucene}
+La distribución Java de Lucene consiste de múltiples librerías en formato JAR.\\
 Para obtener la distribución binaria de Lucene es necesario seguir los siguientes pasos:
 \begin{enumerate}
-\item Descargar la versión mas reciente de la sección de descargas  en el sitio web de Apache Lucene. \texorpdfstring{\href{http://lucene.apache.org/core/downloads.html} {http://lucene.apache.org/core/downloads.html}} {http://lucene.apache.org/core/downloads.html} .  Para el propósito de este proyecto se trabajó con la versión 5.0.0. 
+\item Descargar la versión mas reciente de la sección de descargas  en el sitio web de Apache Lucene. \texorpdfstring{\href{http://lucene.apache.org/core/downloads.html} {http://lucene.apache.org/core/downloads.html}} {http://lucene.apache.org/core/downloads.html} .  Para el propósito de este proyecto se trabajó con la versión 4.9.0 
 \item Extraer el archivo binario a el directorio deseado dentro del sistema.
-\item Dentro de el nuevo directorio se encuentra un jar llamado \textbf{lucene-core-<version>.jar.}. Este archivo es el que se utilizará para construir la aplicación. Para utilizarlo es necesario incluir la ubicación en la lista de librerías de clase cuando se compile con Java utilizando el comando javac.
+\item Dentro de el nuevo directorio se encuentran los archivos enumerados a continuación, que son los únicos necesarios para el proyecto:
+\begin{enumerate}
+\item \textbf{lucene-core-4.9.0.jar}.
+\item \textbf{lucene-analyzers-common-4.9.0.jar}.
+\item \textbf{lucene-queryparser-4.9.0.jar}.
+\end{enumerate}
+
+Estos archivos son los que se utilizarán para construir la aplicación. Para utilizarlos es necesario incluir la ubicación en la lista de librerías de clase cuando se compilen las clases de Java.
 \end{enumerate}
 \clearpage 
 
@@ -56,9 +63,29 @@ Los pasos para su instalación son:
 
 \clearpage
 
+\subsection{Instalación de Apache Tika}
+
+La herramienta Apache Tika permite la extracción de los metadatos e información textual de los documentos abiertos que se encuentran en múltiples formatos. \cite{tika}. \\
+Para propósitos de este proyecto se utilizará para extraer datos de archivos en formato XLM, XLS, JSON y CSV.  \\
+Tika es una librería que contiene múltiples analizadores (parsers en inglés) por cada tipo de documento soportado. La librería presenta la misma API para extraer texto y metadatos de un documento independientemente de el formato, e internamente encuentra el analizador apropiado, permitiendo escribir un sólo programa que uniformemente puede trabajar con diversos tipos de archivos. \\
+La última versión disponible es la 1.7, consiste en un archivo ejecutable en formato jar llamado \textbf{tika-app-1.7.jar } y puede ser descargada de el sitio: \\
+\texorpdfstring{\href{https://tika.apache.org/download.html}} {https://tika.apache.org/download.html} {https://tika.apache.org/download.html}.   \\
+Una vez descargada la herramienta, ésta puede ser ejecutada en modo línea de comando: \\
+\centerline{\emph{cat Document.pdf | java -jar tika-app-1.7.jar -}} \\
+ó utilizando su interfaz gráfica: \\
+\centerline{\emph{java -jar tika-app-1.7.jar --gui}} \\
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Images/ApacheTika}
+    \caption{ Interfaz Gráfica de la herramienta Apache Tika.}
+\end{figure}
+\clearpage
+
+
 \section{Detalles Técnicos}
 En las siguientes secciones se describe los detalles de implementación de cada uno de los componentes involucrados en la creación de la aplicación. Es posible acceder al código de implementación en el repositorio: \\
-\texorpdfstring{\href{https://github.com/citlalig}} {https://github.com/citlalig} {https://github.com/citlalig}.  
+\texorpdfstring{\href{https://github.com/citlalig/DatosAbiertosMXCrawler}} {https://github.com/citlalig/DatosAbiertosMXCrawler} {https://github.com/citlalig/DatosAbiertosMXCrawler}.   \\
+\texorpdfstring{\href{https://github.com/citlalig/DatosAbiertosMXSearcher}} {https://github.com/citlalig/DatosAbiertosMXSearcher} {https://github.com/citlalig/DatosAbiertosMXSearcher}.  
 
 
 \subsection{Adquirir Contenido}
@@ -77,8 +104,7 @@ El programa esta compuesto de :
 \begin{minted}[frame=single,
                framesep=3mm,
                xleftmargin=21pt,
-               tabsize=4]{python}
-{     
+               tabsize=4]{python}     
 import ckanapi
 
 class CkanDatosAbiertosMX:
@@ -114,7 +140,6 @@ class CkanDatosAbiertosMX:
     def getResourceDetails(self, rsrc):
         #Return the metadata of a resource.
         return self.cknsite.action.resource_show(id=rsrc)
-}
 \end{minted}
 \caption{Código fuente de la clase CkanDatosAbiertosMX} 
 \end{figure}
@@ -125,8 +150,7 @@ class CkanDatosAbiertosMX:
 \begin{minted}[frame=single,
                framesep=3mm,
                xleftmargin=21pt,
-               tabsize=4]{python}
-{     
+               tabsize=4]{python}    
 # Encoding: UTF-8
 __author__ = 'citlalig'
 
@@ -134,39 +158,49 @@ from ckandgm import CkanDatosAbiertosMX
 import urllib2
 import os
 import httplib
-import json
+import socket
+import ssl
+import sys
 
 def writeFile(fileName, data):
     output = open(fileName, 'wb')
     output.write(data)
     output.close()
 
-def downloadFile(url, path, resource_format, resource_name=None):
+def downloadFile(url, path, resource_name, resource_format):
     print 'Downloading file '+ url
     try:
-        response = urllib2.urlopen(url)
-        if resource_name != None :
-            file_name = resource_name
-        else:
-            file_name = os.path.basename(url)
-        if resource_format.lower() not in file_name.lower():
-            file_name = file_name + '.' + resource_format.lower();
-        print 'Save file ' + file_name +' to Path: ' + path
+        response = urllib2.urlopen(url, timeout = 30)
+        if resource_format == "" :
+            basename = os.path.basename(url)
+            resource_format = basename[basename.rfind('.')+1:]
+        file_name = resource_name + '.' + resource_format.lower()
+        file_name.encode("UTF-8")
+        print 'Save file ' + file_name + ' to Path: ' + path
         complete_file_name = os.path.join(path, file_name)
         writeFile(complete_file_name, response.read())
 
-    except urllib2.HTTPError:
-        print 'Failed to download resource %s' % url
-    except httplib.BadStatusLine:
-        print 'Could not fetch resource %s' % url
+    except urllib2.HTTPError, e:
+        print type(e)
+    except httplib.BadStatusLine, e:
+        print type(e)
+    except urllib2.URLError, e:
+        print type(e)
+    except socket.timeout as e:
+        print type(e)
+    except ssl.SSLError as e:
+        print type(e)
+    except ssl.SSLError as e:
+        print type(e)
+    except IOError as e:
+        print type(e)
 
 def makeDir(dirName):
     if not os.path.exists(dirName):
         os.makedirs(dirName)
-
-}
 \end{minted}
 \caption{Código fuente de el módulo test\_ckandgm.py (Parte 1)} 
+\label{testckan1}
 \end{figure}
 
 \clearpage
@@ -176,54 +210,254 @@ def makeDir(dirName):
 \begin{minted}[frame=single,
                framesep=3mm,
                xleftmargin=21pt,
-               tabsize=4]{python}
-{     
+               tabsize=4]{python}    
 ##### MAIN CODE ####
 
 SITE_NAME = 'http://catalogo.datos.gob.mx/'
 USER_AGENT = 'MXOpenDataEngine/1.0'
-organizations_list = ['PEMEX', u'ProM\xe9xico', 'SEP', 'Presidencia', 
-                                 'SAGARPA', 'SHCP', 'SEDESOL' ]
+organizations_list = ['pemex', 'promexico', 
+	'sep', 'presidencia', 'sagarpa', 
+	'shcp', 'sedesol' ]
 MAIN_FOLDER = 'catalogo'
 SHOW_DETAILS_ACTION = 'api/3/action/organization_show?id='
-
 datosabiertosmx = CkanDatosAbiertosMX(SITE_NAME, USER_AGENT)
 makeDir(MAIN_FOLDER)
 organizations = datosabiertosmx.getOrganizationList()
 for org in organizations:
-    org_det = datosabiertosmx.getOrganizationDetails(org)
-    display_name = org_det['display_name']
-    print "Processing Organization: " + display_name.encode("utf-8")
-    if display_name in organizations_list:
-        path = os.path.join(MAIN_FOLDER, display_name)
+    print "Organization: ", org
+    if org in organizations_list:
+        print "Processing Organization: " + org
+        org_det = datosabiertosmx.getOrganizationDetails(org)
+        name = org_det['name']
+        path = os.path.join(MAIN_FOLDER, name)
         makeDir(path)
-        downloadFile(SITE_NAME + SHOW_DETAILS_ACTION + 
-        		display_name.lower(), path, "json", 
-		display_name.lower())
+        downloadFile(SITE_NAME + SHOW_DETAILS_ACTION 
+        		+ name, path, name, "json")
         packages = org_det['packages']
         for package in packages:
-            print '\n\tProcessing Package: "' + package['title'] + 
-            	'" with government type', package['gov_type']
+            package_name = package['name']
+            print '\n\tProcessing Package: "' +  package_name
             path = os.path.join(os.path.join(MAIN_FOLDER , 
-            	org_det['display_name'], package['title']))
+            	name , package_name))
             makeDir(path)
             resources = package['resources']
-            print '\t\t Processing Resources in package. '
-            for resource in resources:
-                #print '\t\t Processing Resources in package ' + 
-                		resource['description']
-                print '\t\t Format: ' + resource['format']
-                downloadFile(resource['url'], path, 
-                		resource['format'])
 
-}
+            for resource in resources:
+                print '\t\t Processing Resources '
+                		+ resource['name'] + 'in package. '
+                downloadFile(resource['url'], path, 
+                		resource['name'], resource['format'])
+
+
 \end{minted}
 \caption{Código fuente de el módulo test\_ckandgm.py (Parte 2)} 
+\label{testckan2}
 \end{figure}
 
+\clearpage
+El programa descrito en el código fuente de las imágenes \ref{testckan1} y \ref{testckan2} deberá ser ejecutado utilizando el comando \\
+\centerline{\emph{python test\_ckandgm.py \textgreater resultados.log \textgreater\textgreater resultados.log}}\\
+Y producirá como resultado un directorio llamado \textbf{catalogo} en la ubicación donde el programa fue ejecutado con un subdirectorio por cada organización examinada. \\
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Images/TreeDir}
+    \caption{ Directorio de Documentos Abiertos extraídos de una plataforma CKAN}
+\end{figure}
+
+El detalle de los resultados puede ser consultado en el Apéndice \ref{DocList} (Listado completo de documentos obtenidos de la plataforma datos.gob.mx)
+
+\clearpage
+\subsection{Extraer Texto}
+
+Un paso crítico al construir una aplicación de búsqueda es extraer texto de los documentos que se necesita indexar. En un escenario ideal, el texto debería de existir en formato plano, sin embargo la mayoría de los archivos no se encuentran en tal formato, por el contrario, se encuentran en formatos populares como Word, Excel, PowerPoint, Visio, Flash, PDF, Open Office, Rich Text Format (RTF), TAR, ZIP, y BZIP2. \\
+Incluso formatos relativamente sencillos como XML y HTML deben ser tratados con cuidado para no incluir accidentalmente alguna etiqueta que no forma parte del texto original. \\
+Para resolver los retos que involucra el extraer texto de formatos diversos, existe la librería Apache Tika, la cual es una API fácil de usar que permite filtrar texto.
+
+El método principal es \textit{parse} en la clase \textbf{org.apache.tika.parser.Parser}:
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+void parse(InputStream stream
+          ContentHandler handler,
+          Metadata metadata,
+          ParseContext context) {}         
+\end{minted}
+\caption{Firma del método parse en la librería Tika} 
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+              
+Metadata metadata = new Metadata();
+metadata.set(Metadata.RESOURCE_NAME_KEY, f.getName());
+InputStream is = new FileInputStream(f);
+Parser parser = new AutoDetectParser();
+ContentHandler handler = new BodyContentHandler();
+ParseContext context = new ParseContext();
+context.set(Parser.class, parser);
+try {
+	parser.parse(is, handler, metadata, new ParseContext());
+} finally {
+	is.close();
+}
+\end{minted}
+\caption{Bloque de código: Extraer Texto} 
+\end{figure}
+          
+          
+\clearpage
 \subsection{Construir Documentos}
+Una vez que hemos obtenido los archivos en su formato original, necesitan ser indexados. Para ello es necesario que su contenido sea traducido en unidades usadas por el motor de búsqueda y llamados \emph{Documentos}. \\
+El  \emph{Documento} típicamente consiste de campos con un nombre y un valor, por ejemplo: título, cuerpo, resumen, autor, url, etc. \\
+Lucene provee una API para construir campos a través de la clase \\ \textbf{org.apache.lucene.document.Document} pero no provee una lógica para construir cada documento porque eso es particular de la aplicación.  \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+              
+Document doc = new Document();
+doc.add(new StringField("fullpath", f.getPath(), 
+	Field.Store.YES));
+doc.add(new StringField("filename", f.getCanonicalPath(), 
+	Field.Store.YES));
+doc.add(new LongField("modified", f.lastModified(), 
+	Field.Store.NO));
+doc.add(new TextField("contents", handler.toString(), 
+	Field.Store.NO));
+\end{minted}
+\caption{Bloque de código: Construir un Documento} 
+\end{figure}
+
+
+\clearpage
+
 \subsection{Analizar los Documentos}
+Durante el proceso de analizar un documento el texto debe ser dividido en elementos llamados \emph{tokens}.  Cada \emph{token} corresponde generalmente a una palabra. \\
+Lucene provee un conjunto de analizadores que permiten tener control sobre este proceso. \\
+La aplicación de búsqueda descrita en este documento utiliza la clase \\ \textbf{org.apache.lucene.analysis.standard.StandardAnalyzer} \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+              
+Directory dir = FSDirectory.open(new File(indexDir));
+Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_4_9);
+IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_4_9,
+		analyzer);
+\end{minted}
+\caption{Bloque de código: Analizar un Documento} 
+\end{figure}
+
+\clearpage
+
 \subsection{Indexar los Documentos}
+Durante el indexado de los documentos, el \emph{Documento} se añade a el \emph{Índice}. \\
+Lucene provee las herramientas necesarias para realizar este proceso utilizando la clase \\
+ \textbf{org.apache.lucene.index.IndexWriter} \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+
+private IndexWriter writer = new IndexWriter(dir, iwc);
+
+private void indexFile(File f) throws Exception {
+	System.out.println("Indexing " + f.getCanonicalPath());
+	Document doc = getDocument(f);
+	writer.addDocument(doc);
+}
+
+public int index(String dataDir, FileFilter filter) 
+	throws Exception {
+	File[] files = new File(dataDir).listFiles();
+	for (File f : files) {
+		if (!f.isDirectory() && !f.isHidden() && f.exists() 
+			&& f.canRead()
+			&& (filter == null || filter.accept(f))) {
+				indexFile(f);
+		}
+	}
+	return writer.numDocs();
+}
+
+\end{minted}
+\caption{Bloque de código: Indexar un Documento} 
+\end{figure}
+
+\clearpage
+
 \subsection{Construir Consulta}
+Cuando se solicita una consulta, la solicitud original se traduce a un objeto de tipo \emph{Query}. Los objetos \emph{Query} pueden ser simples o complejos. Lucene provee un paquete llamado \emph{QueryParser} para convertir texto a objetos \emph{Query} utilizando las clases:\\
+\textbf{org.apache.lucene.queryparser.classic.QueryParser} y \\
+\textbf{org.apache.lucene.search.Query} \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_4_9);
+QueryParser parser = new QueryParser(Version.LUCENE_4_9, "contents",
+	analyzer);
+Query query = parser.parse(q);
+\end{minted}
+\caption{Bloque de código: Construir Consulta} 
+\end{figure}
+
+\clearpage
+
 \subsection{Ejecutar Consulta}
+La ejecución de una consulta es el proceso de consultar el \emph{Índice} y regresar los \emph{Documentos} que concuerdan.\\
+La clase para ejecutar la consulta es \textbf{org.apache.lucene.search.IndexSearcher} \\ 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+
+IndexSearcher is = new IndexSearcher(reader);
+long start = System.currentTimeMillis();
+TopDocs hits = is.search(query, 10);
+long end = System.currentTimeMillis();
+
+System.err.println("Found " + hits.totalHits + " document(s) (in "
++ (end - start) + " milliseconds) that matched query '" + q
++ "':");
+
+\end{minted}
+\caption{Bloque de código: Ejecutar Consulta} 
+\end{figure}
+
+\clearpage
+
 \subsection{Mostrar Resultados}
+Una vez que se obtienen los \emph{Documentos} que concuerdan con una consulta, y han sido ordenados, están listos para ser mostrados de una manera que sea intuitiva para el usuario. A su vez, la interfaz deberá permitir búsquedas adicionas o filtrado de búsqueda.  Lucene se encarga de administrar este proceso pero permitiendo personalizar los resultados.  \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{java}    
+
+for (ScoreDoc scoreDoc : hits.scoreDocs) {
+	Document doc = is.doc(scoreDoc.doc);
+	System.out.println(doc.get("fullpath"));
+}
+\end{minted}
+\caption{Bloque de código: Mostrar Resultados} 
+\end{figure}
+
