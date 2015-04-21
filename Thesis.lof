@@ -22,38 +22,46 @@
 \contentsline {figure}{\numberline {11.1}{\ignorespaces Ejemplo de solicitud remota utilizando la librer\IeC {\'\i }a ckanapi en Python\relax }}{30}{figure.caption.71}
 \contentsline {figure}{\numberline {11.2}{\ignorespaces Ejemplo de respuesta a solicitud remota utilizando la librer\IeC {\'\i }a ckanapi en Python\relax }}{30}{figure.caption.72}
 \contentsline {figure}{\numberline {11.3}{\ignorespaces Interfaz Gr\'afica de la herramienta Apache Tika.\relax }}{31}{figure.caption.76}
-\contentsline {figure}{\numberline {11.4}{\ignorespaces C\'odigo fuente de la clase CkanDatosAbiertosMX\relax }}{33}{figure.caption.81}
-\contentsline {figure}{\numberline {11.5}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 1)\relax }}{34}{figure.caption.82}
-\contentsline {figure}{\numberline {11.6}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 2)\relax }}{35}{figure.caption.83}
-\contentsline {figure}{\numberline {11.7}{\ignorespaces Directorio de Documentos Abiertos extra\IeC {\'\i }dos de una plataforma CKAN\relax }}{36}{figure.caption.84}
-\contentsline {figure}{\numberline {11.8}{\ignorespaces Firma del m\'etodo parse en la librer\IeC {\'\i }a Tika\relax }}{37}{figure.caption.86}
-\contentsline {figure}{\numberline {11.9}{\ignorespaces Bloque de c\'odigo: Extraer Texto\relax }}{37}{figure.caption.87}
-\contentsline {figure}{\numberline {11.10}{\ignorespaces Bloque de c\'odigo: Construir un Documento\relax }}{38}{figure.caption.89}
-\contentsline {figure}{\numberline {11.11}{\ignorespaces Bloque de c\'odigo: Analizar un Documento\relax }}{39}{figure.caption.91}
-\contentsline {figure}{\numberline {11.12}{\ignorespaces Bloque de c\'odigo: Indexar un Documento\relax }}{40}{figure.caption.93}
-\contentsline {figure}{\numberline {11.13}{\ignorespaces Bloque de c\'odigo: Construir Consulta\relax }}{41}{figure.caption.95}
-\contentsline {figure}{\numberline {11.14}{\ignorespaces Bloque de c\'odigo: Ejecutar Consulta\relax }}{42}{figure.caption.97}
-\contentsline {figure}{\numberline {11.15}{\ignorespaces Bloque de c\'odigo: Mostrar Resultados\relax }}{43}{figure.caption.99}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Clases del proceso de Indexado\relax }}{32}{figure.caption.78}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces Clases del proceso de B\'usqueda\relax }}{32}{figure.caption.79}
+\contentsline {figure}{\numberline {11.6}{\ignorespaces Arquitectura Prototipo de Plataforma Estructurada para el Acceso a Sistemas de Transparencia Gubernamental.\relax }}{33}{figure.caption.80}
+\contentsline {figure}{\numberline {11.7}{\ignorespaces C\'odigo fuente de la clase CkanDatosAbiertosMX\relax }}{35}{figure.caption.84}
+\contentsline {figure}{\numberline {11.8}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 1)\relax }}{36}{figure.caption.85}
+\contentsline {figure}{\numberline {11.9}{\ignorespaces C\'odigo fuente de el m\'odulo test\_ckandgm.py (Parte 2)\relax }}{37}{figure.caption.86}
+\contentsline {figure}{\numberline {11.10}{\ignorespaces Directorio de Documentos Abiertos extra\IeC {\'\i }dos de una plataforma CKAN\relax }}{38}{figure.caption.87}
+\contentsline {figure}{\numberline {11.11}{\ignorespaces Firma del m\'etodo parse en la librer\IeC {\'\i }a Tika\relax }}{39}{figure.caption.89}
+\contentsline {figure}{\numberline {11.12}{\ignorespaces Bloque de c\'odigo: Extraer Texto\relax }}{39}{figure.caption.90}
+\contentsline {figure}{\numberline {11.13}{\ignorespaces Bloque de c\'odigo: Construir un Documento\relax }}{40}{figure.caption.92}
+\contentsline {figure}{\numberline {11.14}{\ignorespaces Bloque de c\'odigo: Analizar un Documento\relax }}{41}{figure.caption.94}
+\contentsline {figure}{\numberline {11.15}{\ignorespaces Bloque de c\'odigo: Indexar un Documento\relax }}{42}{figure.caption.96}
+\contentsline {figure}{\numberline {11.16}{\ignorespaces Bloque de c\'odigo: Construir Consulta\relax }}{43}{figure.caption.98}
+\contentsline {figure}{\numberline {11.17}{\ignorespaces Bloque de c\'odigo: Ejecutar Consulta\relax }}{44}{figure.caption.101}
+\contentsline {figure}{\numberline {11.18}{\ignorespaces Bloque de c\'odigo: Mostrar Resultados\relax }}{45}{figure.caption.103}
+\contentsline {figure}{\numberline {11.19}{\ignorespaces Compilar las clases de Java\relax }}{46}{figure.caption.105}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Ejecutar la clase TikaIndexer.java\relax }}{47}{figure.caption.108}
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Crear \IeC {\'\i }ndices de los archivos existentes en un directorio.\relax }}{48}{figure.caption.109}
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Ejecutar la clase Searcher.java\relax }}{49}{figure.caption.111}
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Resultados de B\'usqueda. Query = pemex\relax }}{49}{figure.caption.112}
+\contentsline {figure}{\numberline {12.5}{\ignorespaces Ejemplo de B\'usqueda. Query = 'indicadores+pobreza modified:[1/1/15 TO 12/31/15] -multidimensional':\relax }}{50}{figure.caption.113}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {C.1}{\ignorespaces C\'odigo Fuente para clase Indexer.java (Parte 1)\relax }}{54}{figure.caption.118}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces C\'odigo Fuente para clase Indexer.java (Parte 2)\relax }}{55}{figure.caption.119}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces C\'odigo Fuente para clase TikaIndexer.java (Parte 1)\relax }}{56}{figure.caption.120}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces C\'odigo Fuente para clase TikaIndexer.java (Parte 2)\relax }}{57}{figure.caption.121}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces C\'odigo Fuente para clase Searcher.java (Parte 1)\relax }}{58}{figure.caption.122}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces C\'odigo Fuente para clase Searcher.java (Parte 2)\relax }}{59}{figure.caption.123}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces C\'odigo Fuente para clase Indexer.java (Parte 1)\relax }}{49}{figure.caption.106}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces C\'odigo Fuente para clase Indexer.java (Parte 2)\relax }}{50}{figure.caption.107}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces C\'odigo Fuente para clase TikaIndexer.java (Parte 1)\relax }}{51}{figure.caption.108}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces C\'odigo Fuente para clase TikaIndexer.java (Parte 2)\relax }}{52}{figure.caption.109}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces C\'odigo Fuente para clase Searcher.java (Parte 1)\relax }}{53}{figure.caption.110}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces C\'odigo Fuente para clase Searcher.java (Parte 2)\relax }}{54}{figure.caption.111}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Datos Abiertos del Gobierno de Amsterdam.\relax }}{55}{figure.caption.113}
-\contentsline {figure}{\numberline {E.2}{\ignorespaces Datos Abiertos del Gobierno de \'Africa.\relax }}{56}{figure.caption.114}
-\contentsline {figure}{\numberline {E.3}{\ignorespaces Datos Abiertos del Gobierno de Australia.\relax }}{57}{figure.caption.115}
-\contentsline {figure}{\numberline {E.4}{\ignorespaces Datos Abiertos del Gobierno de Berlin.\relax }}{58}{figure.caption.116}
-\contentsline {figure}{\numberline {E.5}{\ignorespaces Datos Abiertos del Gobierno de Brasil.\relax }}{59}{figure.caption.117}
-\contentsline {figure}{\numberline {E.6}{\ignorespaces Datos Abiertos del Gobierno de Buenos Aires.\relax }}{60}{figure.caption.118}
-\contentsline {figure}{\numberline {E.7}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{61}{figure.caption.119}
-\contentsline {figure}{\numberline {E.8}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{62}{figure.caption.120}
-\contentsline {figure}{\numberline {E.9}{\ignorespaces Datos Abiertos del Gobierno del Reino Unido.\relax }}{63}{figure.caption.121}
-\contentsline {figure}{\numberline {E.10}{\ignorespaces Datos Abiertos del Gobierno de Estados Unidos de Am\'erica.\relax }}{64}{figure.caption.122}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Datos Abiertos del Gobierno de Amsterdam.\relax }}{60}{figure.caption.125}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Datos Abiertos del Gobierno de \'Africa.\relax }}{61}{figure.caption.126}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Datos Abiertos del Gobierno de Australia.\relax }}{62}{figure.caption.127}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Datos Abiertos del Gobierno de Berlin.\relax }}{63}{figure.caption.128}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Datos Abiertos del Gobierno de Brasil.\relax }}{64}{figure.caption.129}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Datos Abiertos del Gobierno de Buenos Aires.\relax }}{65}{figure.caption.130}
+\contentsline {figure}{\numberline {D.7}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{66}{figure.caption.131}
+\contentsline {figure}{\numberline {D.8}{\ignorespaces Datos Abiertos del Gobierno de Montreal.\relax }}{67}{figure.caption.132}
+\contentsline {figure}{\numberline {D.9}{\ignorespaces Datos Abiertos del Gobierno del Reino Unido.\relax }}{68}{figure.caption.133}
+\contentsline {figure}{\numberline {D.10}{\ignorespaces Datos Abiertos del Gobierno de Estados Unidos de Am\'erica.\relax }}{69}{figure.caption.134}

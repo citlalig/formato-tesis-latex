@@ -29,19 +29,21 @@
 \contentsline {subsection}{\numberline {11.1.2}Instalaci\'on del m\'odulo de Python para acceder la API de CKAN}{30}{subsection.70}
 \contentsline {subsection}{\numberline {11.1.3}Instalaci\'on de Apache Tika}{31}{subsection.75}
 \contentsline {section}{\numberline {11.2}Detalles T\'ecnicos}{32}{section.77}
-\contentsline {subsection}{\numberline {11.2.1}Adquirir Contenido}{32}{subsection.78}
-\contentsline {subsection}{\numberline {11.2.2}Extraer Texto}{37}{subsection.85}
-\contentsline {subsection}{\numberline {11.2.3}Construir Documentos}{38}{subsection.88}
-\contentsline {subsection}{\numberline {11.2.4}Analizar los Documentos}{39}{subsection.90}
-\contentsline {subsection}{\numberline {11.2.5}Indexar los Documentos}{40}{subsection.92}
-\contentsline {subsection}{\numberline {11.2.6}Construir Consulta}{41}{subsection.94}
-\contentsline {subsection}{\numberline {11.2.7}Ejecutar Consulta}{42}{subsection.96}
-\contentsline {subsection}{\numberline {11.2.8}Mostrar Resultados}{43}{subsection.98}
-\contentsline {chapter}{\numberline {12}Resultados Obtenidos}{44}{chapter.100}
-\contentsline {chapter}{\numberline {13}Conclusiones y Trabajo a Futuro}{45}{chapter.101}
-\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{46}{appendix.102}
-\contentsline {chapter}{\numberline {B}Anexo - Calendario de Actividades}{47}{appendix.103}
-\contentsline {chapter}{\numberline {C}Anexo - Listado completo de documentos obtenidos de la plataforma datos.gob.mx}{48}{appendix.104}
-\contentsline {chapter}{\numberline {D}Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)}{49}{appendix.105}
-\contentsline {chapter}{\numberline {E}Anexo - Ejemplos de implementaciones CKAN en el mundo}{55}{appendix.112}
-\contentsline {chapter}{Bibliograf\'{\i }a}{65}{dummy.123}
+\contentsline {subsection}{\numberline {11.2.1}Adquirir Contenido}{34}{subsection.81}
+\contentsline {subsection}{\numberline {11.2.2}Extraer Texto}{39}{subsection.88}
+\contentsline {subsection}{\numberline {11.2.3}Construir Documentos}{40}{subsection.91}
+\contentsline {subsection}{\numberline {11.2.4}Analizar los Documentos}{41}{subsection.93}
+\contentsline {subsection}{\numberline {11.2.5}Indexar los Documentos}{42}{subsection.95}
+\contentsline {subsection}{\numberline {11.2.6}Construir Consulta}{43}{subsection.97}
+\contentsline {subsection}{\numberline {11.2.7}Ejecutar Consulta}{44}{subsection.100}
+\contentsline {subsection}{\numberline {11.2.8}Mostrar Resultados}{45}{subsection.102}
+\contentsline {section}{\numberline {11.3}Instrucciones para compilar el c\'odigo fuente}{46}{section.104}
+\contentsline {chapter}{\numberline {12}Resultados Obtenidos}{47}{chapter.106}
+\contentsline {section}{\numberline {12.1}Resultados de la ejecuci\'on del proceso de Indexado}{47}{section.107}
+\contentsline {section}{\numberline {12.2}Resultados de la ejecuci\'on del proceso de B\'usqueda}{49}{section.110}
+\contentsline {chapter}{\numberline {13}Conclusiones y Trabajo a Futuro}{51}{chapter.114}
+\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{52}{appendix.115}
+\contentsline {chapter}{\numberline {B}Anexo - Calendario de Actividades}{53}{appendix.116}
+\contentsline {chapter}{\numberline {C}Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)}{54}{appendix.117}
+\contentsline {chapter}{\numberline {D}Anexo - Ejemplos de implementaciones CKAN en el mundo}{60}{appendix.124}
+\contentsline {chapter}{Bibliograf\'{\i }a}{70}{dummy.135}

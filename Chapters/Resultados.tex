@@ -1,2 +1,166 @@
 \chapter{Resultados Obtenidos} 
 
+En esta sección se demuestra como una vez que los archivos han sido adquiridos a través de la plataforma CKAN, es sencillo realizar el Indexado y Búsqueda de texto dentro de el contenido y metadatos de un documento mediante el programa que fue escrito  para ese propósito utilizando las clases que la herramienta Apache Lucene provee.
+
+\section{Resultados de la ejecución del proceso de Indexado}
+
+Los comandos necesarios para ejecutar la clase TikaIndexer.java y por lo tanto iniciar el proceso de Indexado se describen a continuación. \\ 
+Se ejecutará una vez por cada subdirectorio correspondiente a una institución gubernamental para mayor claridad: \\
+\emph{Usage: java datos.gob.mx.TikaIndexer <index dir> <data dir>} \\
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+java -cp $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar:\
+	$APP_HOME/bin:\
+	$LUCENE_HOME/core/tika-app-1.7.jar\
+	datos.gob.mx.TikaIndexer index  $DATA_CATALOG/catalogo/pemex
+\end{minted}
+\caption{Ejecutar la clase TikaIndexer.java} 
+\label{bash}
+\end{figure}
+\clearpage
+Y el resultado de la ejecución serán los Documentos indexados en el directorio indicado. 
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+Indexing pemex/pr-elaboracion-de-petroliferos/
+	PR-Elaboracion de petroliferos.csv
+Indexing pemex/pr-elaboracion-de-petroliferos/
+	PR-Elaboracion de petroliferos.xml
+Indexing pemex/pr-elaboracion-de-petroliferos-por-refineria/
+	PR-Elaboracion de petroliferos por refineria.csv
+Indexing pemex/pr-elaboracion-de-petroliferos-por-refineria/
+	PR-Elaboracion de petroliferos por refineria.xml
+Indexing pemex/pr-estructura-de-precios-de-gasolinas-y-diesel/
+	PR-Estructura de precios de gasolinas y diesel.csv
+Indexing pemex/pr-estructura-de-precios-de-gasolinas-y-diesel/
+	PR-Estructura de precios de gasolinas y diesel.xml
+Indexing pemex/pr-proceso-de-crudo/
+	PR-Proceso de crudo.csv
+Indexing pemex/pr-proceso-de-crudo/
+	PR-Proceso de crudo.xml
+Indexing pemex/pr-valor-comercio-exterior/
+	PR-Valor comercio exterior.csv
+Indexing pemex/pr-valor-comercio-exterior/
+	PR-Valor comercio exterior.xml
+Indexing pemex/pr-valor-ventas/
+	PR-Valor ventas.csv
+Indexing pemex/pr-valor-ventas/
+	PR-Valor ventas.xml
+Indexing pr-volumen-comercio-exterior/
+	PR-Volumen comercio exterior.csv
+Indexing pemex/pr-volumen-comercio-exterior/
+	PR-Volumen comercio exterior.xml
+Indexing pemex/pr-volumen-ventas/
+	PR-Volumen ventas.csv
+Indexing pemex/pr-volumen-ventas/
+	PR-Volumen ventas.xml
+Indexing pemex/quejas-oic-junio-2014/
+	Petroleos Mexicanos y Organismos Subsidiarios.csv
+Indexing pemex/quejas-oic-septiembre-2014/
+	Petroleos Mexicanos y Organismos Subsidiarios.csv
+Indexing 181 files took 3583 milliseconds
+\end{minted}
+\caption{ Crear índices de los archivos existentes en un directorio.}
+\label{bash}
+\end{figure}
+
+\clearpage
+\section{Resultados de la ejecución del proceso de Búsqueda}
+Los comandos necesarios para ejecutar la clase Searcher.java y por lo tanto realizar una búsqueda a partir de los índices existentes se describen a continuación: \\
+\emph{Usage: java datos.gob.mx.Searcher <index dir> <query>} \\
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+java -cp $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar:\
+	$APP_HOME/bin:\
+	$LUCENE_HOME/queryparser/lucene-queryparser-4.9.0.jar\
+	datos.gob.mx.Searcher index pemex
+\end{minted}
+\caption{Ejecutar la clase Searcher.java} 
+\label{bash}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+Found 210 document(s) (in 37 milliseconds) 
+	that matched query 'pemex':
+catalogo/pemex/quejas-oic-junio-2014/
+	Petroleos Mexicanos y Organismos Subsidiarios.csv
+catalogo/pemex/quejas-oic-septiembre-2014/
+	Petroleos Mexicanos y Organismos Subsidiarios.csv
+catalogo/pemex/pemex.json
+catalogo/pemex/pemex-estadisticas-seleccionadas/
+	PEMEX Estadisticas seleccionadas.xml
+\end{minted}
+\caption{ Resultados de Búsqueda. Query = pemex}
+\label{pemexq}
+\end{figure}
+El resultado de la ejecución serán la lista de Documentos que satisfacen la consulta. \\ La consulta mostrada previamente es muy sencilla sin embargo pueden ser tan complicadas como se desee. \\
+Un ejemplo mas elaborado de búsqueda utilizando una expresión de consulta utilizando metadatos, basado en contenido, titulo, y fecha de modificación se muestra a continuación: \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+$ java -cp $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar:\
+	$APP_HOME/bin:\
+	$LUCENE_HOME/queryparser/lucene-queryparser-4.9.0.jar \
+	datos.gob.mx.Searcher index 
+	"indicadores+pobreza modified:[1/1/15 TO 12/31/15]
+	 -multidimensional"
+Found 7 document(s) (in 88 milliseconds) 
+that matched query 'indicadores+pobreza 
+	modified:[1/1/15 TO 12/31/15] -multidimensional':
+catalogo/presidencia/
+	mexico-incluyente-indicadores-del-pnd-y-pmp/
+	Indicadores del Plan Nacional de Desarrollo, 2013-2018 2. 
+	México Incluyente.xlsx
+catalogo/presidencia/mexico-con-educacion-de-calidad-
+	indicadores-del-pnd-y-pmp/
+	Indicadores del Programa Nacional de Cultura Física 
+	y Deporte 2014-2018 
+	y su vinculación con la planeación nacional.xlsx
+catalogo/presidencia/mexico-con-educacion-de-calidad-
+	indicadores-del-pnd-y-pmp/
+	Indicadores del Plan Nacional de Desarrollo, 
+	2013-2018 3. 
+	México con Educación de Calidad.xlsx
+catalogo/presidencia/mexico-incluyente-estadisticas-nacionales/
+	Indicadores de seguridad social del IMSS 
+	Concepto.xlsx
+catalogo/presidencia/mexico-con-educacion-de-calidad-
+	indicadores-del-pnd-y-pmp/
+	Indicadores del Programa Sectorial de 
+	Educación 2013-2018 
+	y su vinculación con la planeación nacional 
+	(Ciclos escolares).xlsx
+catalogo/presidencia/mexico-en-paz-indicadores-del-pnd-y-pmp/
+	Indicadores del Programa Sectorial de Defensa Nacional 2013-2018 
+	y su vinculación con la planeación nacional.xlsx
+catalogo/presidencia/mexico-incluyente-indicadores-del-pnd-y-pmp/
+	Indicadores del Programa Nacional para el Desarrollo 
+	y la Inclusión de las Personas con Discapacidad, 2014-2018 
+	y su vinculación con la planeación nacional.xlsx
+\end{minted}
+\caption{ Ejemplo de Búsqueda. Query = 'indicadores+pobreza modified:[1/1/15 TO 12/31/15] -multidimensional':}
+\label{pemexq}
+\end{figure}
+
+
+
+
+

@@ -83,10 +83,31 @@ Una vez descargada la herramienta, ésta puede ser ejecutada en modo línea de com
 
 
 \section{Detalles Técnicos}
-En las siguientes secciones se describe los detalles de implementación de cada uno de los componentes involucrados en la creación de la aplicación. Es posible acceder al código de implementación en el repositorio: \\
+En las siguientes secciones se describe los detalles de implementación de cada uno de los componentes involucrados en la creación de la aplicación.\\
+El código fuente completo puede ser consultado en el Apéndice \ref{SearchApp} Aplicación de Búsqueda (Código Fuente). \\
+También Es posible acceder al código de implementación en el repositorio: \\
 \texorpdfstring{\href{https://github.com/citlalig/DatosAbiertosMXCrawler}} {https://github.com/citlalig/DatosAbiertosMXCrawler} {https://github.com/citlalig/DatosAbiertosMXCrawler}.   \\
-\texorpdfstring{\href{https://github.com/citlalig/DatosAbiertosMXSearcher}} {https://github.com/citlalig/DatosAbiertosMXSearcher} {https://github.com/citlalig/DatosAbiertosMXSearcher}.  
+\texorpdfstring{\href{https://github.com/citlalig/DatosAbiertosMXSearcher}} {https://github.com/citlalig/DatosAbiertosMXSearcher} {https://github.com/citlalig/DatosAbiertosMXSearcher}.  \\
 
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.8\textwidth]{Images/ClasesIndexer}
+    \caption{Clases del proceso de Indexado} 
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.7\textwidth]{Images/ClasesSearcher}
+    \caption{Clases del proceso de Búsqueda} 
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Images/ArquitecturaClases}
+    \caption{Arquitectura Prototipo de Plataforma Estructurada para el Acceso a Sistemas de Transparencia Gubernamental.}
+\end{figure}
+
+\clearpage
 
 \subsection{Adquirir Contenido}
 
@@ -265,8 +286,6 @@ Y producirá como resultado un directorio llamado \textbf{catalogo} en la ubicaci
     \caption{ Directorio de Documentos Abiertos extraídos de una plataforma CKAN}
 \end{figure}
 
-El detalle de los resultados puede ser consultado en el Apéndice \ref{DocList} (Listado completo de documentos obtenidos de la plataforma datos.gob.mx)
-
 \clearpage
 \subsection{Extraer Texto}
 
@@ -317,7 +336,10 @@ try {
 \subsection{Construir Documentos}
 Una vez que hemos obtenido los archivos en su formato original, necesitan ser indexados. Para ello es necesario que su contenido sea traducido en unidades usadas por el motor de búsqueda y llamados \emph{Documentos}. \\
 El  \emph{Documento} típicamente consiste de campos con un nombre y un valor, por ejemplo: título, cuerpo, resumen, autor, url, etc. \\
-Lucene provee una API para construir campos a través de la clase \\ \textbf{org.apache.lucene.document.Document} pero no provee una lógica para construir cada documento porque eso es particular de la aplicación.  \\
+Lucene provee una API para construir campos a través de las clases \\ \textbf{org.apache.lucene.document.Document} y \textbf{org.apache.lucene.document.Field}.  \\
+La clase  \emph{Document}  representa una colección de objetos de tipo \emph{Field}.\\
+\emph{Field} es la clase que contiene el contenido a ser indexado. \\
+En la aplicación se utilizan lo campos ubicación de archivo, nombre de archivo, fecha de modificación y contenido para identificar un Documento. \\
 
 \begin{figure}[h!]
 \begin{minted}[frame=single,
@@ -342,8 +364,8 @@ doc.add(new TextField("contents", handler.toString(),
 \clearpage
 
 \subsection{Analizar los Documentos}
-Durante el proceso de analizar un documento el texto debe ser dividido en elementos llamados \emph{tokens}.  Cada \emph{token} corresponde generalmente a una palabra. \\
-Lucene provee un conjunto de analizadores que permiten tener control sobre este proceso. \\
+Durante el proceso de analizar un documento, el texto debe ser dividido en elementos llamados \emph{tokens}.  Cada \emph{token} corresponde generalmente a una palabra. \\
+Lucene provee un conjunto de analizadores que permiten tener control sobre este proceso. Algunos ayudan a ignorar palabras que no ayudan a distinguir un documento de otro por ejemplo la, el, en, y, etc o que convierten los \emph{token} a minúscula para favorecer la búsqueda.\\
 La aplicación de búsqueda descrita en este documento utiliza la clase \\ \textbf{org.apache.lucene.analysis.standard.StandardAnalyzer} \\
 
 \begin{figure}[h!]
@@ -366,6 +388,7 @@ IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_4_9,
 Durante el indexado de los documentos, el \emph{Documento} se añade a el \emph{Índice}. \\
 Lucene provee las herramientas necesarias para realizar este proceso utilizando la clase \\
  \textbf{org.apache.lucene.index.IndexWriter} \\
+ \emph{IndexWriter} el el componente principal en el proceso de indexado. La clase crea un índice nuevo o abre un índice existente, y agrega, actualiza o elimina documentos de él. \\
 
 \begin{figure}[h!]
 \begin{minted}[frame=single,
@@ -401,9 +424,10 @@ public int index(String dataDir, FileFilter filter)
 \clearpage
 
 \subsection{Construir Consulta}
-Cuando se solicita una consulta, la solicitud original se traduce a un objeto de tipo \emph{Query}. Los objetos \emph{Query} pueden ser simples o complejos. Lucene provee un paquete llamado \emph{QueryParser} para convertir texto a objetos \emph{Query} utilizando las clases:\\
-\textbf{org.apache.lucene.queryparser.classic.QueryParser} y \\
-\textbf{org.apache.lucene.search.Query} \\
+Lucene incluye varias clases concretas de la clase abstracta: \\ \textbf{org.apache.lucene.search.Query} \\
+Algunos ejemplos de ellas son: TermQuery, BooleanQuery, PhraseQuery, PrefixQuery, PhrasePrefixQuery, TermRangeQuery, NumericRangeQuery, FilteredQuery, y SpanQuery. \\
+Cuando se solicita una consulta, la solicitud original se traduce a un objeto de tipo \emph{Query}. Los objetos \emph{Query} pueden ser simples o complejos. Lucene provee un paquete llamado \emph{QueryParser} para convertir texto a objetos \emph{Query} utilizando la clase: \textbf{org.apache.lucene.queryparser.classic.QueryParser} \\
+ 
 
 \begin{figure}[h!]
 \begin{minted}[frame=single,
@@ -418,11 +442,32 @@ Query query = parser.parse(q);
 \caption{Bloque de código: Construir Consulta} 
 \end{figure}
 
+\begin{table}[!hbt]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Expresión de Consulta & Coincide con documentos que ...\\
+\hline
+java & contienen la palabra java\\
+java junit & contienen la palabra java o junit o ambas.\\
++java +junit & contienen ambas palabras java y junit.\\
+title:ant & El campo title coincide con el nombre ant.\\
+java~ & Contiene términos que son similares como lava.\\
+lastmodified: [1/1/15 TO 12/31/15] & El campo lastmodified contiene valores entre las fechas.\\
+\hline
+\end{tabular}
+\caption{Ejemplos de expresiones para realizar una consulta}
+\end{center}
+\end{table}
+
 \clearpage
 
 \subsection{Ejecutar Consulta}
 La ejecución de una consulta es el proceso de consultar el \emph{Índice} y regresar los \emph{Documentos} que concuerdan.\\
 La clase para ejecutar la consulta es \textbf{org.apache.lucene.search.IndexSearcher} \\ 
+\emph{IndexSearcher}  es el enlace principal hacia un índice y provee varios métodos de búsqueda. Es una clase que abre un índice en modo de sólo lectura y ofrece numerosos métodos de búsqueda. El resultado es un objeto de tipo TopDocs. \\
+La clase: \textbf{org.apache.lucene.search.TopDocs} es simplemente un contenedor de punteros a los resultados de búsqueda ordenados por relevancia. \\
+
 \begin{figure}[h!]
 \begin{minted}[frame=single,
                framesep=3mm,
@@ -460,4 +505,38 @@ for (ScoreDoc scoreDoc : hits.scoreDocs) {
 \end{minted}
 \caption{Bloque de código: Mostrar Resultados} 
 \end{figure}
+
+\clearpage
+
+\section{Instrucciones para compilar el código fuente}
+
+Los comandos necesarios para compilar las clases Indexer.java, TikaIndexer.java y Searcher.java desde una linea de comandos son: \\
+
+\begin{figure}[h!]
+\begin{minted}[frame=single,
+               framesep=3mm,
+               xleftmargin=21pt,
+               tabsize=4]{bash}
+export LUCENE_HOME=/Applications/lucene-4.9.0
+export APP_HOME=/Documents/Workspace/DatosAbiertosMXSearcher
+export DATA_CATALOG=/Documents/GitHub/DatosAbiertosMXCrawler
+
+javac -classpath $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar \
+	$APP_HOME/src/datos/gob/mx/Indexer.java 
+javac -classpath $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar:\
+	$LUCENE_HOME/core/tika-app-1.7.jar:\
+	$APP_HOME/bin \
+	$APP_HOME/src/datos/gob/mx/TikaIndexer.java
+javac -classpath $LUCENE_HOME/core/lucene-core-4.9.0.jar:\
+	$LUCENE_HOME/analysis/common/lucene-analyzers-common-4.9.0.jar:\
+	$LUCENE_HOME/queryparser/lucene-queryparser-4.9.0.jar \
+	$APP_HOME/src/datos/gob/mx/Searcher.java 
+\end{minted}
+\caption{Compilar las clases de Java} 
+\label{bash}
+\end{figure}
+
+\clearpage
 
