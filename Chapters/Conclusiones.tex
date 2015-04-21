@@ -1,1 +1,16 @@
 \chapter{Conclusiones y Trabajo a Futuro} 
+
+El Prototipo de Plataforma Estructurada para el Acceso a Sistemas de Transparencia Gubernamental propuesto en este documento demuestra como es posible maximizar el valor de la información pública al combinar las capacidades de diversas tecnologías novedosas haciéndolas trabajar para un bien común. \\
+Se ha demostrado cómo el método de búsqueda tradicional por etiquetas, disponible en las plataformas CKAN, puede ser ineficiente debido a su incapacidad de incluir el contenido y metadatos de un documento en sus criterios de búsqueda. \\
+Por su parte la metodología de búsqueda y extracción de información basado en Apache Lucene ha probado ser más especializado y permite realizar consultas avanzadas utilizando un lenguaje más flexible. \\
+Construir proyectos basados en esta metodología alternativa de búsqueda, abre las puertas a un mundo muy amplio e interesantes de posibilidades. \\
+Algunas áreas de oportunidad que se han identificado y sobre las cuales se puede profundizar y complementar la investigación de el presente documento son:
+\begin{itemize}
+\item Desarrollar una interfaz gráfica que permita a la aplicación desplegar los resultados de una manera intuitiva para el usuario. La interfaz gráfica deberá permitir a un usuario escribir sus búsquedas en lenguaje ordinario y dichas consultas deberán ser traducidas internamente a una expresión consumible por la aplicación. También podría ofrecer opciones para refinar una búsqueda, paginar los resultados, encontrar documentos similares, etc.
+\item Proveer escalabilidad de la aplicación para soportar grandes cantidades de documentos. Se sugiere implementar un sistema distribuido para almacenar los datos de tal manera que sea escalable y de alta disponibilidad.
+\item Añadir un módulo de Analítica para conocer como están utilizando la aplicación los usuarios y que consultas están realizando. 
+\item Añadir otros campos a el Documento al momento de ser construido de tal manera que permita tener acceso a más criterios de búsqueda.
+\item Modificar la aplicación de indexado para selectivamente darle mayor prioridad a algunos campos y documentos (boosting) dada su importancia.
+\item Optimizar los índices y permitir acceso concurrente.
+\item Modificar la aplicación de búsqueda para añadir técnicas avanzadas de búsqueda como búsqueda por rango numérico, búsqueda booleana, búsqueda por frase, búsqueda por comodín, etc.
+\end{itemize}

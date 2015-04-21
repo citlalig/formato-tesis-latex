@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 APR 2015 01:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 APR 2015 03:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -882,7 +882,7 @@ Overfull \hbox (2.7858pt too wide) detected at line 40
 
 
 ]
-Overfull \hbox (0.21156pt too wide) detected at line 67
+Overfull \hbox (0.21156pt too wide) detected at line 70
 \T1/cmr/m/n/10.95 D.10. 
  []
 
@@ -999,7 +999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-<Images/EstudioMckinsey.png, id=491, 527.9725pt x 456.70625pt>
+<Images/EstudioMckinsey.png, id=499, 527.9725pt x 456.70625pt>
 File: Images/EstudioMckinsey.png Graphic file (type png)
 
 <use Images/EstudioMckinsey.png>
@@ -1056,7 +1056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
-<Images/CatalogoDatosMx.png, id=516, 1103.12125pt x 610.28pt>
+<Images/CatalogoDatosMx.png, id=524, 1103.12125pt x 610.28pt>
 File: Images/CatalogoDatosMx.png Graphic file (type png)
 
 <use Images/CatalogoDatosMx.png>
@@ -1227,7 +1227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 360--361
  []
 
 
-<Images/ArquitecturaAplicacionDeBusqueda.png, id=603, 597.58257pt x 632.3625pt>
+<Images/ArquitecturaAplicacionDeBusqueda.png, id=612, 597.58257pt x 632.3625pt>
 File: Images/ArquitecturaAplicacionDeBusqueda.png Graphic file (type png)
 <use Images/ArquitecturaAplicacionDeBusqueda.png>
 Package pdftex.def Info: Images/ArquitecturaAplicacionDeBusqueda.png used on in
@@ -1276,7 +1276,7 @@ LaTeX Info: Redefining \% on input line 64.
  [30
 
 ]
-<Images/ApacheTika.png, id=637, 641.39626pt x 271.0125pt>
+<Images/ApacheTika.png, id=645, 641.39626pt x 271.0125pt>
 File: Images/ApacheTika.png Graphic file (type png)
 
 <use Images/ApacheTika.png>
@@ -1291,21 +1291,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--91
 
  []
 
-<Images/ClasesIndexer.png, id=647, 485.815pt x 173.64874pt>
+<Images/ClasesIndexer.png, id=655, 485.815pt x 173.64874pt>
 File: Images/ClasesIndexer.png Graphic file (type png)
 
 <use Images/ClasesIndexer.png>
 Package pdftex.def Info: Images/ClasesIndexer.png used on input line 94.
 (pdftex.def)             Requested size: 333.97972pt x 119.37526pt.
 
-<Images/ClasesSearcher.png, id=648, 361.35pt x 295.1025pt>
+<Images/ClasesSearcher.png, id=656, 361.35pt x 295.1025pt>
 File: Images/ClasesSearcher.png Graphic file (type png)
 
 <use Images/ClasesSearcher.png>
 Package pdftex.def Info: Images/ClasesSearcher.png used on input line 100.
 (pdftex.def)             Requested size: 292.22987pt x 238.65346pt.
 
-<Images/ArquitecturaClases.png, id=649, 356.38144pt x 613.39163pt>
+<Images/ArquitecturaClases.png, id=657, 356.38144pt x 613.39163pt>
 File: Images/ArquitecturaClases.png Graphic file (type png)
 
 <use Images/ArquitecturaClases.png>
@@ -1386,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--282
 
  []
 
-<Images/TreeDir.png, id=683, 566.115pt x 206.7725pt>
+<Images/TreeDir.png, id=691, 566.115pt x 206.7725pt>
 File: Images/TreeDir.png Graphic file (type png)
  <use Images/TreeDir.png>
 Package pdftex.def Info: Images/TreeDir.png used on input line 285.
@@ -1666,9 +1666,12 @@ Cap\'{\i }tulo 13.
 ------------------------------------------------------------------------------
  13 Conclusiones y Trabajo a Futuro
 ------------------------------------------------------------------------------
-) (./Appendices/FormatoDocs.tex [51
+[51
 
-]
+]) (./Appendices/FormatoDocs.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [52]
 Ap\'{e}ndice A.
 ------------------------------------------------------------------------------
  A Anexo - Resumen de formatos de archivos m\'as comunes
@@ -1678,16 +1681,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--1
 
  []
 
-[52
+[53
 
 ]
 Ap\'{e}ndice B.
 ------------------------------------------------------------------------------
  B Anexo - Calendario de Actividades
 ------------------------------------------------------------------------------
-) (./Appendices/CodigoFuenteAppBusqueda.tex [53
+<Images/ActividadesP1.png, id=761, 1379.1525pt x 339.2675pt>
+File: Images/ActividadesP1.png Graphic file (type png)
 
-]
+<use Images/ActividadesP1.png>
+Package pdftex.def Info: Images/ActividadesP1.png used on input line 5.
+(pdftex.def)             Requested size: 417.47307pt x 102.69733pt.
+
+<Images/ActividadesP2.png, id=762, 1374.13374pt x 386.44376pt>
+File: Images/ActividadesP2.png Graphic file (type png)
+
+<use Images/ActividadesP2.png>
+Package pdftex.def Info: Images/ActividadesP2.png used on input line 10.
+(pdftex.def)             Requested size: 417.47307pt x 117.40228pt.
+
+<Images/ActividadesP3.png, id=763, 1373.13pt x 374.39874pt>
+File: Images/ActividadesP3.png Graphic file (type png)
+
+<use Images/ActividadesP3.png>
+Package pdftex.def Info: Images/ActividadesP3.png used on input line 15.
+(pdftex.def)             Requested size: 417.47307pt x 113.82297pt.
+) (./Appendices/CodigoFuenteAppBusqueda.tex
+[54
+
+ <./Images/ActividadesP1.png> <./Images/ActividadesP2.png> <./Images/Actividade
+sP3.png>]
 Ap\'{e}ndice C.
 ------------------------------------------------------------------------------
  C Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)
@@ -1781,12 +1806,9 @@ runsystem(rm Thesis.pyg)...executed.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Appendices/AppendixA.tex [54
+) (./Appendices/AppendixA.tex [55
 
 ]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [55]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [56]
@@ -1799,18 +1821,21 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [59]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [60]
 Ap\'{e}ndice D.
 ------------------------------------------------------------------------------
  D Anexo - Ejemplos de implementaciones CKAN en el mundo
 ------------------------------------------------------------------------------
-<Images/AmsterdamOpenData.png, id=793, 298.11375pt x 362.35374pt>
+<Images/AmsterdamOpenData.png, id=796, 298.11375pt x 362.35374pt>
 File: Images/AmsterdamOpenData.png Graphic file (type png)
 
 <use Images/AmsterdamOpenData.png>
 Package pdftex.def Info: Images/AmsterdamOpenData.png used on input line 5.
 (pdftex.def)             Requested size: 333.97972pt x 405.97165pt.
 
-<Images/AfricaOpenData.png, id=794, 301.125pt x 480.79625pt>
+<Images/AfricaOpenData.png, id=797, 301.125pt x 480.79625pt>
 File: Images/AfricaOpenData.png Graphic file (type png)
 
 <use Images/AfricaOpenData.png>
@@ -1820,7 +1845,7 @@ Package pdftex.def Info: Images/AfricaOpenData.png used on input line 10.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/AustraliaOpenData.png, id=795, 300.12125pt x 366.36874pt>
+<Images/AustraliaOpenData.png, id=798, 300.12125pt x 366.36874pt>
 File: Images/AustraliaOpenData.png Graphic file (type png)
 
 <use Images/AustraliaOpenData.png>
@@ -1830,7 +1855,7 @@ Package pdftex.def Info: Images/AustraliaOpenData.png used on input line 15.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BerlinOpenData.png, id=796, 297.11pt x 377.41pt>
+<Images/BerlinOpenData.png, id=799, 297.11pt x 377.41pt>
 File: Images/BerlinOpenData.png Graphic file (type png)
 
 <use Images/BerlinOpenData.png>
@@ -1840,7 +1865,7 @@ Package pdftex.def Info: Images/BerlinOpenData.png used on input line 20.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BrasilOpenData.png, id=797, 298.11375pt x 462.72874pt>
+<Images/BrasilOpenData.png, id=800, 298.11375pt x 462.72874pt>
 File: Images/BrasilOpenData.png Graphic file (type png)
 
 <use Images/BrasilOpenData.png>
@@ -1850,7 +1875,7 @@ Package pdftex.def Info: Images/BrasilOpenData.png used on input line 25.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/BuenosAiresOpenData.png, id=798, 301.125pt x 381.425pt>
+<Images/BuenosAiresOpenData.png, id=801, 301.125pt x 381.425pt>
 File: Images/BuenosAiresOpenData.png Graphic file (type png)
 
 <use Images/BuenosAiresOpenData.png>
@@ -1860,7 +1885,7 @@ Package pdftex.def Info: Images/BuenosAiresOpenData.png used on input line 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/MontrealOpenData.png, id=799, 298.11375pt x 402.50375pt>
+<Images/MontrealOpenData.png, id=802, 298.11375pt x 402.50375pt>
 File: Images/MontrealOpenData.png Graphic file (type png)
 
 <use Images/MontrealOpenData.png>
@@ -1870,7 +1895,7 @@ Package pdftex.def Info: Images/MontrealOpenData.png used on input line 35.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/MexicoOpenData.png, id=800, 300.12125pt x 363.3575pt>
+<Images/MexicoOpenData.png, id=803, 300.12125pt x 363.3575pt>
 File: Images/MexicoOpenData.png Graphic file (type png)
 
 <use Images/MexicoOpenData.png>
@@ -1880,7 +1905,7 @@ Package pdftex.def Info: Images/MexicoOpenData.png used on input line 40.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/UKOpenData.png, id=801, 299.1175pt x 442.65375pt>
+<Images/UKOpenData.png, id=804, 299.1175pt x 442.65375pt>
 File: Images/UKOpenData.png Graphic file (type png)
 
 <use Images/UKOpenData.png>
@@ -1890,7 +1915,7 @@ Package pdftex.def Info: Images/UKOpenData.png used on input line 45.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/USOpenData.png, id=802, 300.12125pt x 420.57124pt>
+<Images/USOpenData.png, id=805, 300.12125pt x 420.57124pt>
 File: Images/USOpenData.png Graphic file (type png)
 
 <use Images/USOpenData.png>
@@ -1900,13 +1925,13 @@ Package pdftex.def Info: Images/USOpenData.png used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [60
+) [61
 
- <./Images/AmsterdamOpenData.png>] [61 <./Images/AfricaOpenData.png>]
-[62 <./Images/AustraliaOpenData.png>] [63 <./Images/BerlinOpenData.png>]
-[64 <./Images/BrasilOpenData.png>] [65 <./Images/BuenosAiresOpenData.png>]
-[66 <./Images/MontrealOpenData.png>] [67 <./Images/MexicoOpenData.png>]
-[68 <./Images/UKOpenData.png>] [69 <./Images/USOpenData.png>]
+ <./Images/AmsterdamOpenData.png>] [62 <./Images/AfricaOpenData.png>]
+[63 <./Images/AustraliaOpenData.png>] [64 <./Images/BerlinOpenData.png>]
+[65 <./Images/BrasilOpenData.png>] [66 <./Images/BuenosAiresOpenData.png>]
+[67 <./Images/MontrealOpenData.png>] [68 <./Images/MexicoOpenData.png>]
+[69 <./Images/UKOpenData.png>] [70 <./Images/USOpenData.png>]
 ------------------------------------------------------------------------------
  Bibliograf\'{\i }a
 ------------------------------------------------------------------------------
@@ -1922,7 +1947,7 @@ Underfull \hbox (badness 2486) in paragraph at lines 49--54
  po-ten-tial, Fe-
  []
 
-[70
+[71
 
 
 ]
@@ -1963,7 +1988,7 @@ itehouse . gov / the-[]press-[]office /
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
- [71]
+ [72]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (./Thesis.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -1971,108 +1996,51 @@ LaTeX Info: Redefining \% on input line 23.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 7F5EDF536BF9A9856E3CB7EEAE08C9BA;10119.
 
-
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: EAC7F6094B4FED45D89E3574A088F91D;10118
-(rerunfilecheck)             After:  88D157C8DC73C0B91BD543783B3A1274;10119.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 17768 strings out of 493117
- 252367 string characters out of 6135433
- 388883 words of memory out of 5000000
- 20564 multiletter control sequences out of 15000+600000
+ 17770 strings out of 493117
+ 252584 string characters out of 6135433
+ 389052 words of memory out of 5000000
+ 20576 multiletter control sequences out of 15000+600000
  21519 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,12n,45p,964b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.124} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.117} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.110} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.107} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.104} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.102} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.100} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{dummy.134} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix.123} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix.114} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.113} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.109} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.106} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.105} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.103} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.101} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.99} has been referenced but does not exi
-st, replaced by a fixed one
-
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/
-2014/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/texmf
--dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dist/
-fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/font
-s/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/
-type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/cm-super/sfxc1095.pfb>
-Output written on Thesis.pdf (81 pages, 1566054 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2014/tex
+mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2014/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/cm-super/sfti1728.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/cm-super/sfti2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
+pe1/public/cm-super/sfxc1095.pfb>
+Output written on Thesis.pdf (82 pages, 1643342 bytes).
 PDF statistics:
- 1043 PDF objects out of 1200 (max. 8388607)
- 891 compressed objects within 9 object streams
- 255 named destinations out of 1000 (max. 500000)
- 475 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1040 PDF objects out of 1200 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 242 named destinations out of 1000 (max. 500000)
+ 490 words of extra memory for PDF output out of 10000 (max. 10000000)
 

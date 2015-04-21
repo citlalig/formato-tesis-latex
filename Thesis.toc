@@ -42,8 +42,8 @@
 \contentsline {section}{\numberline {12.1}Resultados de la ejecuci\'on del proceso de Indexado}{47}{section.107}
 \contentsline {section}{\numberline {12.2}Resultados de la ejecuci\'on del proceso de B\'usqueda}{49}{section.110}
 \contentsline {chapter}{\numberline {13}Conclusiones y Trabajo a Futuro}{51}{chapter.114}
-\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{52}{appendix.115}
-\contentsline {chapter}{\numberline {B}Anexo - Calendario de Actividades}{53}{appendix.116}
-\contentsline {chapter}{\numberline {C}Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)}{54}{appendix.117}
-\contentsline {chapter}{\numberline {D}Anexo - Ejemplos de implementaciones CKAN en el mundo}{60}{appendix.124}
-\contentsline {chapter}{Bibliograf\'{\i }a}{70}{dummy.135}
+\contentsline {chapter}{\numberline {A}Anexo - Resumen de formatos de archivos m\'as comunes}{53}{appendix.115}
+\contentsline {chapter}{\numberline {B}Anexo - Calendario de Actividades}{54}{appendix.116}
+\contentsline {chapter}{\numberline {C}Anexo - Aplicaci\'on de B\'usqueda (C\'odigo Fuente)}{55}{appendix.120}
+\contentsline {chapter}{\numberline {D}Anexo - Ejemplos de implementaciones CKAN en el mundo}{61}{appendix.127}
+\contentsline {chapter}{Bibliograf\'{\i }a}{71}{dummy.138}
